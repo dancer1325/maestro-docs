@@ -16,7 +16,7 @@ You need an account to take advantage of Maestro Cloud solution. Access [Maestro
 {% step %}
 ### Trigger a cloud runs
 
-After creating your tests, you can initiate a [cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) execution directly from the Studio interface in two ways:
+After creating your tests, you can initiate a [cloud](../cloud/README.md) execution directly from the Studio interface in two ways:
 
 1. **Run All Tests**: Click on the **Cloud tab**, and then click on the **Run All Tests** button to execute all root-level tests in your workspace.
 2. **Run a Single Test**: Open a specific test file in the editor and click on the **Cloud** tab, then click on **Run Test**.
@@ -43,14 +43,14 @@ For more advanced testing scenarios, you can expand **More Options** to select:
 You can select an existing Environment, or create a new one. To create a new one, click **Manage Environments** to define tags (for filtering tests) and environment variables.
 
 {% hint style="info" %}
-&#x20;For further information about tags, access [Test discovery and tags](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags "mention").
+&#x20;For further information about tags, access [Test discovery and tags](../flows/workspace-management/test-discovery-and-tags.md "mention").
 
-For more information about variables, access [Parameters and constants](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants "mention").
+For more information about variables, access [Parameters and constants](../flows/flow-control-and-logic/parameters-and-constants.md "mention").
 {% endhint %}
 
 If you manage multiple Maestro projects, select the specific project to receive these test results.&#x20;
 
-Use the **Device Locale** option to manually set the locale for the cloud device (e.g., `en_US` or `de_DE`). For more information, access [Test in different locales](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/test-in-different-locales "mention").
+Use the **Device Locale** option to manually set the locale for the cloud device (e.g., `en_US` or `de_DE`). For more information, access [Test in different locales](../flows/flow-control-and-logic/test-in-different-locales/README.md "mention").
 {% endstep %}
 
 {% step %}

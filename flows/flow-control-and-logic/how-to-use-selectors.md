@@ -41,9 +41,9 @@ Explore these specialized reference pages to find the right tool for every UI sc
 
 | Category                                                                                              | Best for                                                                               |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| [Core Selectors](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors/core-selectors)             | The essentials: `text`, `id`, `index`, `point`, and `css` (web).                       |
-| [Relational Selectors](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors/relational-selectors) | Finding elements based on visual position (`above`, `below`) or structure (`childOf`). |
-| [Element Traits](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors/element-traits)             | Filtering by physical characteristics like `square` or `long-text`.                    |
-| [State Selectors](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors/state-selectors)           | Verifying functional status (`enabled`, `checked`, `focused`, or `selected`).          |
-| [Dimension Matchers](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors/dimension-matchers)     | Targeting by physical size (`width`, `height`) with `tolerance`.                       |
+| [Core Selectors](../../api-reference/selectors/core-selectors.md)             | The essentials: `text`, `id`, `index`, `point`, and `css` (web).                       |
+| [Relational Selectors](../../api-reference/selectors/relational-selectors.md) | Finding elements based on visual position (`above`, `below`) or structure (`childOf`). |
+| [Element Traits](../../api-reference/selectors/element-traits.md)             | Filtering by physical characteristics like `square` or `long-text`.                    |
+| [State Selectors](../../api-reference/selectors/state-selectors.md)           | Verifying functional status (`enabled`, `checked`, `focused`, or `selected`).          |
+| [Dimension Matchers](../../api-reference/selectors/dimension-matchers.md)     | Targeting by physical size (`width`, `height`) with `tolerance`.                       |
 

@@ -62,7 +62,7 @@ The above Flow automates the contact creation, but it is important to understand
 
 **2. Implementation**
 
-Depending on your needs, you can run this automation directly or integrate it into a larger test. If you have the[ Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/) installed and an active Android emulator running, you can execute this Flow immediately using the following command in your terminal:
+Depending on your needs, you can run this automation directly or integrate it into a larger test. If you have the[ Maestro CLI](../../maestro-cli/README.md) installed and an active Android emulator running, you can execute this Flow immediately using the following command in your terminal:
 
 ```bash
 maestro test contacts.yaml
@@ -87,6 +87,6 @@ appId: com.your.app
 
 Explore these pages to learn more about the automation patterns used in this recipe:
 
-* [inputText](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext): See all available random data generators, including addresses and email.
-* [Generate synthetic data](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/generate-synthetic-data "mention"): Learn how to generate random test data.
+* [inputText](../../api-reference/commands-available/inputtext.md): See all available random data generators, including addresses and email.
+* [Generate synthetic data](../../flows/javascript/generate-synthetic-data.md "mention"): Learn how to generate random test data.
 

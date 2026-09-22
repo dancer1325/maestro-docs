@@ -85,7 +85,7 @@ You can pass environment variables to your Maestro Flows (accessible via `${env.
 
 ### Filtering with Tags
 
-You can use [Tags](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags) to include or exclude specific Flows from the run.
+You can use [Tags](../../../flows/workspace-management/test-discovery-and-tags.md) to include or exclude specific Flows from the run.
 
 * `include-tags`: Only run Flows with these tags.
 * `exclude-tags`: Skip Flows with these tags.

@@ -1,0 +1,34 @@
+# 1. global
+flows:
+  - 'subFolder/*'
+  - 'anotherSubfolder/**'
+  - '!anotherSubfolder/helper.yaml' # Exclude files with a '!' prefix
+# Customised test output directory
+testOutputDir: test_output_directory
+
+# 2. Execution & filtering
+includeTags:
+  - tagNameToInclude
+excludeTags:
+  - tagNameToExclude
+executionOrder:
+  continueOnFailure: false # default is true
+  flowsOrder:
+    - flowA
+    - flowB
+
+# 3. Platform Configuration
+platform:
+  ios:
+    snapshotKeyHonorModalViews: false
+    disableAnimations: true
+  android:
+    disableAnimations: true
+
+# 4. Maestro cloud configuration
+baselineBranch: main
+notifications:
+  email:
+    enabled: true
+    recipients:
+      - john@example.com

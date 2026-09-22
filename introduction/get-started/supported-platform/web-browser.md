@@ -36,7 +36,7 @@ url: https://maestro.mobile.dev
 - assertVisible: "Installing the CLI"
 ```
 
-On the first run, Maestro will automatically download a managed version of Chromium. Subsequent runs will launch instantly. To run the test with [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/), just run:
+On the first run, Maestro will automatically download a managed version of Chromium. Subsequent runs will launch instantly. To run the test with [Maestro CLI](../../../maestro-cli/README.md), just run:
 
 ```bash
 maestro test example.yaml
@@ -44,16 +44,16 @@ maestro test example.yaml
 
 ### Maestro Studio for Web
 
-[Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/) is fully compatible with web testing. It allows you to visually inspect web elements and generate YAML commands through a point-and-click interface.
+[Maestro Studio](../../../maestro-studio/README.md) is fully compatible with web testing. It allows you to visually inspect web elements and generate YAML commands through a point-and-click interface.
 
 ### Platform specifics and tips
 
 * **Flutter Web**: Just like Flutter Mobile, Flutter Web renders elements differently. You should use Semantics to make elements addressable. Refer to the [Flutter](https://docs.maestro.dev/platform-support/flutter) documentation for best practices.
-* [**Selectors**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors): Maestro prioritizes user-visible text. For complex web apps, using unique text labels or stable accessibility attributes is recommended to ensure your tests remain "refactoring resilient."
+* [**Selectors**](../../../flows/flow-control-and-logic/how-to-use-selectors.md): Maestro prioritizes user-visible text. For complex web apps, using unique text labels or stable accessibility attributes is recommended to ensure your tests remain "refactoring resilient."
 
 ### State Management
 
-By default, browser state (cookies, local storage, etc.) is retained between flows in the same test run. State can be cleared by [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) by using the [clearState](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/clearstate) command or the `clearState` option of the [launchApp](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/launchapp) command.
+By default, browser state (cookies, local storage, etc.) is retained between flows in the same test run. State can be cleared by [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) by using the [clearState](../../../api-reference/commands-available/clearstate.md) command or the `clearState` option of the [launchApp](../../../api-reference/commands-available/launchapp.md) command.
 
 ### Known limitations
 
@@ -67,8 +67,8 @@ As this feature is in Beta, certain advanced browser configurations are not yet 
 
 If you don't know how to create tests with Maestro, access the [QuickStart](../quickstart.md) guide to get up and running in minutes.
 
-To learn how to create tests, refer to the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
+To learn how to create tests, refer to the [Flows](../../../flows/README.md) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
 
-* [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/)
-* [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)
+* [Maestro Studio](../../../maestro-studio/README.md)
+* [Maestro CLI](../../../maestro-cli/README.md)
+* [Maestro Cloud](../../../cloud/README.md)

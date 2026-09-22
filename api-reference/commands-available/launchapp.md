@@ -170,4 +170,4 @@ Future<void> getArguments() async {
 
 ### Related content
 
-Learn how to use [permissions](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/permissions) on iOS and Android apps on flows.
+Learn how to use [permissions](../../flows/flow-control-and-logic/permissions.md) on iOS and Android apps on flows.

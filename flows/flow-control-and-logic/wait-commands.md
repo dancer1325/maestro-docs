@@ -18,8 +18,8 @@ Before using a dedicated wait command, remember the golden rule of Maestro timin
 
 Maestro’s assertions are smart. They don't just check once and fail, they poll the UI continuously until the element appears or the timer expires. This makes them the most efficient way to wait because the test continues immediately after the condition is met.
 
-* [`assertVisible`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertvisible): Best for waiting for a screen to load, a success message to appear, or a button to become active.
-* [`assertNotVisible`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertnotvisible): Best for waiting for a loading spinner to disappear or a modal to close.
+* [`assertVisible`](../../api-reference/commands-available/assertvisible.md): Best for waiting for a screen to load, a success message to appear, or a button to become active.
+* [`assertNotVisible`](../../api-reference/commands-available/assertnotvisible.md): Best for waiting for a loading spinner to disappear or a modal to close.
 
 ```yaml
 # assertVisible example
@@ -33,7 +33,7 @@ When assertions aren't enough, such as for long-running processes or stabilizing
 
 #### Waiting for long processes (`extendedWaitUntil`)
 
-Use [`extendedWaitUntil`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/extendedwaituntil) for slow network responses (like processing a payment or generating a large report) that are guaranteed to take longer than a few seconds.
+Use [`extendedWaitUntil`](../../api-reference/commands-available/extendedwaituntil.md) for slow network responses (like processing a payment or generating a large report) that are guaranteed to take longer than a few seconds.
 
 This command optimizes your test because Maestro moves on immediately if the element appears faster than the timeout.
 
@@ -53,7 +53,7 @@ Avoid setting every timeout to 60 seconds. If a screen should load in 5 seconds,
 
 Sometimes elements are visible but still moving (e.g., a list sliding into place or a side menu opening). Interacting too early can cause missed taps.
 
-Use the [`waitForAnimationToEnd`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/waitforanimationtoend) command to ensure the test continues only after the animation finishes.
+Use the [`waitForAnimationToEnd`](../../api-reference/commands-available/waitforanimationtoend.md) command to ensure the test continues only after the animation finishes.
 
 ```yaml
 - waitForAnimationToEnd:
@@ -63,16 +63,16 @@ Use the [`waitForAnimationToEnd`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb
 {% hint style="success" %}
 #### Ghost taps
 
-If you experience "ghost taps" (tapping a button that exists but isn't yet clickable), combine your wait logic with [`retryTapIfNoChange: true`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/tapon#retry-a-tap-if-the-ui-is-unresponsive) in your `tapOn` command.
+If you experience "ghost taps" (tapping a button that exists but isn't yet clickable), combine your wait logic with [`retryTapIfNoChange: true`](../../api-reference/commands-available/tapon.md#retry-a-tap-if-the-ui-is-unresponsive) in your `tapOn` command.
 {% endhint %}
 
 ### Next steps
 
 For full technical details and parameter lists, visit the individual command pages:
 
-* [`assertVisible`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertvisible): Your primary tool for standard waits.
-* [`assertNotVisible`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertnotvisible): For waiting for elements to disappear.
-* [`extendedWaitUntil`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/extendedwaituntil): For smart, long-duration waiting.
-* [`waitForAnimationToEnd`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/waitforanimationtoend): For stabilization after UI transitions.
+* [`assertVisible`](../../api-reference/commands-available/assertvisible.md): Your primary tool for standard waits.
+* [`assertNotVisible`](../../api-reference/commands-available/assertnotvisible.md): For waiting for elements to disappear.
+* [`extendedWaitUntil`](../../api-reference/commands-available/extendedwaituntil.md): For smart, long-duration waiting.
+* [`waitForAnimationToEnd`](../../api-reference/commands-available/waitforanimationtoend.md): For stabilization after UI transitions.
 
 Or continue learning about flow control by exploring the [Loops](loops.md) or [Conditions](conditions.md) guides.

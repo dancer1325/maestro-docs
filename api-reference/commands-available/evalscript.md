@@ -32,4 +32,4 @@ env:
 
 ### Related content
 
-Access the [JavaScript guides](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-overview) to learn how to use JavaScript when creating Flows.
+Access the [JavaScript guides](../../flows/javascript/javascript-overview.md) to learn how to use JavaScript when creating Flows.

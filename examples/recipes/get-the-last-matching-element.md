@@ -4,7 +4,7 @@ description: Select the last element in a list using index selectors and JavaScr
 
 # Get the last matching element
 
-In Maestro, targeting a specific view is usually straightforward using [indexes](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors/core-selectors). For example, if you want the third **Add to Basket** button, you simply use `index: 2` :&#x20;
+In Maestro, targeting a specific view is usually straightforward using [indexes](../../api-reference/selectors/core-selectors.md). For example, if you want the third **Add to Basket** button, you simply use `index: 2` :&#x20;
 
 ```yaml
 - tapOn:
@@ -138,6 +138,6 @@ To use this helper, call it as a subflow and then use the resulting `${output.la
 
 If you want to explore the building blocks of this algorithmic approach, check out these pages:
 
-* [Loops](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/loops "mention"): Learn the different ways to iterate in Maestro, including `while` loops and count-based loops.
-* [JavaScript overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-overview "mention"): Discover how to use JavaScript to manage complex state and logic within your YAML files.
-* [How to use Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors "mention"): Review the fundamentals of how Maestro identifies and differentiates between similar UI elements.
+* [Loops](../../flows/flow-control-and-logic/loops.md "mention"): Learn the different ways to iterate in Maestro, including `while` loops and count-based loops.
+* [JavaScript overview](../../flows/javascript/javascript-overview.md "mention"): Discover how to use JavaScript to manage complex state and logic within your YAML files.
+* [How to use Selectors](../../flows/flow-control-and-logic/how-to-use-selectors.md "mention"): Review the fundamentals of how Maestro identifies and differentiates between similar UI elements.

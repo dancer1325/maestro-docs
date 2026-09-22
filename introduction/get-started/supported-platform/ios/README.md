@@ -50,13 +50,13 @@ Maestro connects to your target via native Apple development tools.
 
 ### Cross-platform configuration
 
-If your Android and iOS applications use different identifiers, we recommend using [environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) to keep your [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/) cross-platform.
+If your Android and iOS applications use different identifiers, we recommend using [environment variables](../../../../flows/flow-control-and-logic/parameters-and-constants.md) to keep your [Flows](../../../../flows/README.md) cross-platform.
 
 You can manage these variables in three primary ways:
 
-1. **Maestro Studio**: Configured via the [Environment Manager](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environments-and-variables).
-2. [**Maestro CLI**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#passing-parameters-via-cli): Passed as arguments during execution.
-3. **Flow Configuration**: Defined directly in the [config matter](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#constants) at the top of an individual Flow file.
+1. **Maestro Studio**: Configured via the [Environment Manager](../../../../maestro-studio/environments-and-variables.md).
+2. [**Maestro CLI**](../../../../flows/flow-control-and-logic/parameters-and-constants.md#passing-parameters-via-cli): Passed as arguments during execution.
+3. **Flow Configuration**: Defined directly in the [config matter](../../../../flows/flow-control-and-logic/parameters-and-constants.md#constants) at the top of an individual Flow file.
 
 To run a single test suite against different platforms where the App ID varies, structure your Flow to use a variable:
 
@@ -67,7 +67,7 @@ appId: ${APP_ID}
 - launchApp
 ```
 
-When executing locally with the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/), use the `-e` or `--env` flag to inject the correct identifier for that specific run:
+When executing locally with the [Maestro CLI](../../../../maestro-cli/README.md), use the `-e` or `--env` flag to inject the correct identifier for that specific run:
 
 ```bash
 maestro test -e APP_ID=com.example.app.ios flow.yaml
@@ -77,7 +77,7 @@ maestro test --env APP_ID=com.example.app.ios flow.yaml
 
 ### Parallelization for iOS
 
-Scaling iOS tests locally can be difficult due to macOS hardware requirements. [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) provides instant access to a fleet of iOS Simulators, allowing you to run your entire suite in parallel.
+Scaling iOS tests locally can be difficult due to macOS hardware requirements. [Maestro Cloud](../../../../cloud/README.md) provides instant access to a fleet of iOS Simulators, allowing you to run your entire suite in parallel.
 
 * **Speed**: Reduce test time drastically.
 * **Reliability**: Eliminate "flaky" results caused by local machine resource contention.
@@ -89,6 +89,6 @@ Explore the dedicated [UIKit](uikit.md) or [SwiftUI](swiftui.md) documentation, 
 
 If you already know which Maestro solution you are going to use, access the relevant documentation:
 
-* [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/)
-* [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)
+* [Maestro Studio](../../../../maestro-studio/README.md)
+* [Maestro CLI](../../../../maestro-cli/README.md)
+* [Maestro Cloud](../../../../cloud/README.md)

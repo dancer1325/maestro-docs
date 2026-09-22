@@ -10,7 +10,7 @@ Maestro solves this by allowing you to explicitly configure permissions either a
 
 ### Configure permissions on launch
 
-The easiest way to manage permissions is during the [`launchApp`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/launchapp) command. By default, Maestro grants all permissions, but you can override this behavior to test specific scenarios.
+The easiest way to manage permissions is during the [`launchApp`](../../api-reference/commands-available/launchapp.md) command. By default, Maestro grants all permissions, but you can override this behavior to test specific scenarios.
 
 To customize launch permissions, you need to specify them when calling `launchApp`. The following example denies all permissions but explicitly allows the camera and location:
 
@@ -24,7 +24,7 @@ To customize launch permissions, you need to specify them when calling `launchAp
 
 ### Changing permissions mid-flow
 
-Sometimes you need to change permissions while the app is running, for example, to test how your app handles a permission denial or to prepare for a specific feature flow like scanning a QR code. Use the [`setPermissions`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/setpermissions) command for this purpose.
+Sometimes you need to change permissions while the app is running, for example, to test how your app handles a permission denial or to prepare for a specific feature flow like scanning a QR code. Use the [`setPermissions`](../../api-reference/commands-available/setpermissions.md) command for this purpose.
 
 ```yaml
 - setPermissions:
@@ -167,5 +167,5 @@ This is a common pattern for testing specific features in isolation.
 
 ### Related resources&#xD;
 
-* [`launchApp`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/launchapp): See the full reference for launching apps.
-* &#x20;[`setPermissions`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/setpermissions): Command for altering permissions configuration mid-flow.
+* [`launchApp`](../../api-reference/commands-available/launchapp.md): See the full reference for launching apps.
+* &#x20;[`setPermissions`](../../api-reference/commands-available/setpermissions.md): Command for altering permissions configuration mid-flow.

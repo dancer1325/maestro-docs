@@ -12,7 +12,7 @@ While Maestro provides the `addMedia` command to seed the device with images, th
 
 Since the media picker is an external system process, you cannot rely on your app's internal IDs. Instead, you need to target the native elements of the OS. The strategy here is to:
 
-1. Ensure the gallery isn't empty. You can do this by using the [`addMedia`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/addmedia) command prior to this Flow or by having your test take a picture using the device camera.
+1. Ensure the gallery isn't empty. You can do this by using the [`addMedia`](../../api-reference/commands-available/addmedia.md) command prior to this Flow or by having your test take a picture using the device camera.
 2. Trigger the image picker in your app.
 3. Use a series of optional taps that target known system IDs for different OS versions.
 4. Fall back until a match is found.
@@ -81,4 +81,4 @@ To use this in your main test suite, ensure your gallery has content (via `addMe
 
 Explore the following documentation pages if you'd like to dive deeper into the commands used in this recipe:
 
-* [addMedia](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/addmedia "mention"): Learn how to inject images or videos into the device gallery.
+* [addMedia](../../api-reference/commands-available/addmedia.md "mention"): Learn how to inject images or videos into the device gallery.

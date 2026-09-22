@@ -43,7 +43,7 @@ You can update URLs or tokens, or disable an integration at any time from the se
 
 ### Webhook payload example
 
-When an upload event occurs, Maestro sends a POST request with a JSON payload. The payload also includes [tags](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags) and [custom properties](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-reports-and-artifacts) defined in your flows, allowing you to filter and route events if necessary.
+When an upload event occurs, Maestro sends a POST request with a JSON payload. The payload also includes [tags](../../flows/workspace-management/test-discovery-and-tags.md) and [custom properties](../../flows/workspace-management/test-reports-and-artifacts.md) defined in your flows, allowing you to filter and route events if necessary.
 
 Below is an example of the data sent:
 

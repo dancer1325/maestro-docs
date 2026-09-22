@@ -217,6 +217,6 @@ By applying this approach, each platform loads its own selectors, but your test 
 
 To master the logic used in the Page Object Model, explore these deep-dives:
 
-* [JavaScript](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript "mention"): Learn how to use JavaScript to manage shared data and complex structures.
-* [Parameters and constants](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants "mention"): Learn how the `output` object persists across Flows.
-* [Conditions](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions "mention"): Master the `when` clause for platform-specific logic.
+* [JavaScript](../../flows/javascript/javascript-overview.md "mention"): Learn how to use JavaScript to manage shared data and complex structures.
+* [Parameters and constants](../../flows/flow-control-and-logic/parameters-and-constants.md "mention"): Learn how the `output` object persists across Flows.
+* [Conditions](../../flows/flow-control-and-logic/conditions.md "mention"): Master the `when` clause for platform-specific logic.

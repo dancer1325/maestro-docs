@@ -1,0 +1,9 @@
+appId: com.android.contacts
+---
+- launchApp
+- tapOn: "Create new contact"
+- tapOn: "First Name"
+- inputText: "John"
+- tapOn: "Last Name"
+- inputText: "Snow"
+- tapOn: "Save"

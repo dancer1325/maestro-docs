@@ -13,13 +13,13 @@ This guide demonstrates how to use Maestro to automate complex user journeys in 
 
 Before starting, ensure you have the project files and the app ready:
 
-1. **Install Maestro CLI**: Follow the [installation guide](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/how-to-install-maestro-cli).
+1. **Install Maestro CLI**: Follow the [installation guide](../../maestro-cli/how-to-install-maestro-cli/README.md).
 2. **Download Samples**: Run `maestro download-samples` to fetch the source code and the `wikipedia.apk`.
 3. **Navigate to Project**: Open your terminal and enter the directory after download the samples (`cd wikipedia-android-advanced`).
 
 ### Project Structure
 
-The project is [organized into subflows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/nested-flows) to ensure maintainability and reusability across different test suites:
+The project is [organized into subflows](../../flows/flow-control-and-logic/nested-flows.md) to ensure maintainability and reusability across different test suites:
 
 ```
 ├── run-test.yml           # Root test suite orchestrator
@@ -268,7 +268,7 @@ output.credentials = {
 {% endtab %}
 
 {% tab title="fetchTestUsers.js" %}
-This script uses [`http.get`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/make-http-requests) to fetch user data from a placeholder API. It then parses the JSON response to provide a username and email to the Maestro Flow.
+This script uses [`http.get`](../../flows/javascript/make-http-requests.md) to fetch user data from a placeholder API. It then parses the JSON response to provide a username and email to the Maestro Flow.
 
 ```javascript
 // Fetches test user from API
@@ -328,8 +328,8 @@ maestro test run-test.yml
 
 ### Related content
 
-* [Nested Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/nested-flows): Build modular, reusable tests by embedding existing Flows into complex user journeys.
-* [inputText](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext): Learn how to simulate realistic keyboard entries.
-* [Make HTTP requests](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/make-http-requests): Make HTTP API calls from your flows to set up test data or verify backend state.
-*   [JavaScript overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-overview): Unlock advanced logic and conditional testing power by integrating scripts into your YAML.
+* [Nested Flows](../../flows/flow-control-and-logic/nested-flows.md): Build modular, reusable tests by embedding existing Flows into complex user journeys.
+* [inputText](../../api-reference/commands-available/inputtext.md): Learn how to simulate realistic keyboard entries.
+* [Make HTTP requests](../../flows/javascript/make-http-requests.md): Make HTTP API calls from your flows to set up test data or verify backend state.
+*   [JavaScript overview](../../flows/javascript/javascript-overview.md): Unlock advanced logic and conditional testing power by integrating scripts into your YAML.
 

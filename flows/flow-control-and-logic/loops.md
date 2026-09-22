@@ -6,7 +6,7 @@ description: Repeat actions using the repeat command for iterative test scenario
 
 Automating repetitive tasks is one of the primary benefits of end-to-end testing. Whether you are adding multiple items to a cart, deleting a list of messages, or performing bulk data entry, loops allow you to execute sequences of commands efficiently without duplicating code.
 
-In Maestro, loops are handled via the [`repeat`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/repeat) command. This guide will teach you how to use fixed and conditional loops to create dynamic and resilient Flows.
+In Maestro, loops are handled via the [`repeat`](../../api-reference/commands-available/repeat.md) command. This guide will teach you how to use fixed and conditional loops to create dynamic and resilient Flows.
 
 ### Loop strategies
 
@@ -65,7 +65,7 @@ Suppose you want to dismiss all "Update" notifications, but you want to limit th
 
 Sometimes, a simple visibility check is not enough. You might need to loop based on a numeric value or a calculation. For this, you can use JavaScript expressions within the `while` parameter.
 
-Depending on how you are using JavaScript, you might need to initialize a variable before the loop. For example, if you are using a counter, you can use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript) to set a starting value in the Maestro `output` object. After that, you can use the variable in the `while` condition.
+Depending on how you are using JavaScript, you might need to initialize a variable before the loop. For example, if you are using a counter, you can use [`evalScript`](../../api-reference/commands-available/evalscript.md) to set a starting value in the Maestro `output` object. After that, you can use the variable in the `while` condition.
 
 In the following example, the counter is initialized and then incremented on each iteration of the loop.
 
@@ -82,7 +82,7 @@ In the following example, the counter is initialized and then incremented on eac
 
 ### Integrate nested Flows with loops
 
-You can combine [nested Flows](nested-flows.md) with loops when you need to perform a complex, multi-step sequence multiple times (e.g., creating five different user accounts or adding a variety of products to a cart). Instead of cluttering your main test with a long list of commands inside a loop, you can encapsulate the logic in a subflow and call it using [`runFlow`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runflow) within the `repeat` block.
+You can combine [nested Flows](nested-flows.md) with loops when you need to perform a complex, multi-step sequence multiple times (e.g., creating five different user accounts or adding a variety of products to a cart). Instead of cluttering your main test with a long list of commands inside a loop, you can encapsulate the logic in a subflow and call it using [`runFlow`](../../api-reference/commands-available/runflow.md) within the `repeat` block.
 
 Suppose you need to add three different items to a shopping cart. By combining `repeat` with `runFlow` and `env` variables, you can create a clean, data-driven test. The main Flow can use JavaScript to define the data and then loop through it, while the subflow handles the mechanics of finding and adding an item.
 

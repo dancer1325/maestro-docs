@@ -72,4 +72,4 @@ Use this command for scenarios where standard element selectors are not practica
 
 ### Prerequisites
 
-Before using this command, you must configure the AI service. Check the [AI test analysis](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/ai-test-analysis "mention") page for more information.
+Before using this command, you must configure the AI service. Check the [AI test analysis](../../flows/workspace-management/ai-test-analysis.md "mention") page for more information.

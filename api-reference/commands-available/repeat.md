@@ -87,9 +87,9 @@ Here’s another example that logs `"Hello World"` four times. The `times: 4` li
 ```
 
 {% hint style="success" %}
-Use the `--verbose` flag to see the effect of the `repeat` command more effectively when using [Maestro CLI overview](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/ "mention").
+Use the `--verbose` flag to see the effect of the `repeat` command more effectively when using [Maestro CLI overview](../../maestro-cli/README.md "mention").
 {% endhint %}
 
 ### Related content
 
-Learn how to use [conditions](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions) in your Flows.
+Learn how to use [conditions](../../flows/flow-control-and-logic/conditions.md) in your Flows.

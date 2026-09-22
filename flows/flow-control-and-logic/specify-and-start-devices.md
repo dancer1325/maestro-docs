@@ -10,7 +10,7 @@ When managing multiple simulators, emulators, or physical devices, Maestro needs
 
 ### Start a device
 
-Maestro allows you to create and launch Android emulators or iOS simulators directly from the CLI. These devices are configured to approximate the environment hosted on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme), ensuring your Flows are compatible when you scale up.
+Maestro allows you to create and launch Android emulators or iOS simulators directly from the CLI. These devices are configured to approximate the environment hosted on [Maestro Cloud](../../cloud/README.md), ensuring your Flows are compatible when you scale up.
 
 To view all available options and configurations available, run:
 
@@ -114,7 +114,7 @@ It is not possible to list web devices. Maestro always launches its own instance
 
 To run a test on a specific device, use the `--device` flag. This flag must be provided before the `test` command.&#x20;
 
-When running a Flow with the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/), you can explicitly define the target device. For example, to run `flow.yaml` on an iOS simulator with the identifier `5B6D77EF-2AE9-47D0-9A62-70A1ABBC5FA2`, use the following command:
+When running a Flow with the [Maestro CLI](../../maestro-cli/README.md), you can explicitly define the target device. For example, to run `flow.yaml` on an iOS simulator with the identifier `5B6D77EF-2AE9-47D0-9A62-70A1ABBC5FA2`, use the following command:
 
 ```bash
 maestro --device 5B6D77EF-2AE9-47D0-9A62-70A1ABBC5FA2 test flow.yaml
@@ -134,7 +134,7 @@ If you have multiple devices running, you can speed up your local execution by "
 {% hint style="info" %}
 #### Maestro Cloud
 
-[Maestro Cloud](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/ky7LkNoLfvcORtXOzzBs/) handles device allocation and parallelization automatically. Sharding flags are primarily for local development and local CI runners.
+[Maestro Cloud](../../cloud/README.md) handles device allocation and parallelization automatically. Sharding flags are primarily for local development and local CI runners.
 {% endhint %}
 
 #### **Strategy A: `--shard-all`**
@@ -177,6 +177,6 @@ When sharding, you're using the same workspace on multiple devices at the same t
 
 #### Related content
 
-* [Maestro CLI commands and options](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options "mention"): Full list of available flags and commands.
+* [Maestro CLI commands and options](../../maestro-cli/maestro-cli-commands-and-options.md "mention"): Full list of available flags and commands.
 * [test-reports-and-artifacts.md](../workspace-management/test-reports-and-artifacts.md "mention"): Learn how reports are generated when running in parallel.
-* [Maestro Cloud](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/ky7LkNoLfvcORtXOzzBs/): Scale your tests to dozens of devices without managing hardware.
+* [Maestro Cloud](../../cloud/README.md): Scale your tests to dozens of devices without managing hardware.

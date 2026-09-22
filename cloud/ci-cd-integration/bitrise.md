@@ -24,7 +24,7 @@ Setting up Maestro Cloud in your Bitrise workflow is straightforward. Here’s h
 {% hint style="info" %}
 Avoid using the `MAESTRO_` prefix for your secret names unless you specifically want them passed into the test run as environment variables.
 
-Any variable prefixed with `MAESTRO_` will be [added as environment variable](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) for your run.
+Any variable prefixed with `MAESTRO_` will be [added as environment variable](../../flows/flow-control-and-logic/parameters-and-constants.md) for your run.
 {% endhint %}
 
 3. Open the **Workflow Editor** and search for "Maestro" in the Bitrise step library. Add the step after your application binary build step.
@@ -74,4 +74,4 @@ Now that your CI pipeline is connected, consider optimizing your cloud runs:
 * Set up notifications via [Slack](../notifications/set-slack-notification.md), [email](../notifications/set-email-notification.md), or [webhooks](../notifications/configure-webhooks.md) to stay informed about build and test results.
 * [Configure the operating system](../environment-configuration/configure-the-os.md) for your runs to match your application and dependency requirements.
 * Define [locales and time zones](../environment-configuration/app-locales-and-device-timezones.md) to ensure consistent behavior across environments and regions.
-* Explore all the [subcommand options for `claud`.](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud)
+* Explore all the [subcommand options for `claud`.](../../maestro-cli/maestro-cli-commands-and-options.md#cloud)

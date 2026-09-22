@@ -67,4 +67,4 @@ This example demonstrates how to copy text from a UI element, store the copied v
 
 ### Related content
 
-Explore how the [`pasteText`](pastetext.md) command works, or learn how to use the available [Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors) to define the desired element when copying content.
+Explore how the [`pasteText`](pastetext.md) command works, or learn how to use the available [Selectors](../../flows/flow-control-and-logic/how-to-use-selectors.md) to define the desired element when copying content.

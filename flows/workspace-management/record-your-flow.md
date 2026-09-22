@@ -50,4 +50,4 @@ If you run `maestro record` without the `--local` flag, Maestro currently sends 
 
 ### Related content
 
-You can also record your tests using [startRecording](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/startrecording "mention") or take screenshots for specific steps using [takeScreenshot](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/takescreenshot "mention").
+You can also record your tests using [startRecording](../../api-reference/commands-available/startrecording.md "mention") or take screenshots for specific steps using [takeScreenshot](../../api-reference/commands-available/takescreenshot.md "mention").

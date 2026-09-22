@@ -145,5 +145,5 @@ Maestro provides a set of built-in parameters that are available in all flows.
 To continue learning how to create Flows, check the following pages:
 
 * [nested-flows.md](nested-flows.md "mention"): Learn more about using `runFlow` to pass environment variables.
-* [Maestro CLI overview](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/ "mention") : Explore more options for the `-e` flag.
+* [Maestro CLI overview](../../maestro-cli/README.md "mention") : Explore more options for the `-e` flag.
 * [javascript-overview.md](../javascript/javascript-overview.md "mention"): Learn how to manipulate parameters using JavaScript logic.

@@ -49,4 +49,4 @@ Reusing an app binary is a performance optimization and does not compromise secu
 
 ### Related content
 
-* [Maestro CLI reference](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options): Full list of all available parameters.
+* [Maestro CLI reference](../../maestro-cli/maestro-cli-commands-and-options.md): Full list of all available parameters.

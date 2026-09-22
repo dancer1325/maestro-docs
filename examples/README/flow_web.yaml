@@ -1,0 +1,5 @@
+url: https://example.com
+---
+- launchApp
+- tapOn: More information...
+- assertVisible: Further Reading

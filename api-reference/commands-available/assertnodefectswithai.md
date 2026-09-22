@@ -50,4 +50,4 @@ The following video demonstrates the command in action.
 
 ### Related content
 
-Access the [AI test analysis](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/ai-test-analysis "mention") to learn how to configure the workspace to use the AI based solutions.
+Access the [AI test analysis](../../flows/workspace-management/ai-test-analysis.md "mention") to learn how to configure the workspace to use the AI based solutions.

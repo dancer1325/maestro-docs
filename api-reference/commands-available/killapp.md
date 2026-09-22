@@ -45,7 +45,7 @@ appId: com.example
 
 ### Best practices
 
-Maestro team recommends defining the process death commands as a reusable [subflow](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/nested-flows) (e.g., `trigger-process-death.yaml`) and calling it via `runFlow` in your tests. This ensures that the screen under test maintains its data after the system-initiated process death.
+Maestro team recommends defining the process death commands as a reusable [subflow](../../flows/flow-control-and-logic/nested-flows.md) (e.g., `trigger-process-death.yaml`) and calling it via `runFlow` in your tests. This ensures that the screen under test maintains its data after the system-initiated process death.
 
 The following example demonstrates how to verify data persistence:
 

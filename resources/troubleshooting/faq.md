@@ -10,7 +10,7 @@ Find answers to common Maestro questions: parameters, assertions, YAML gotchas, 
 
 <summary>How can I use the same flow when my apps have different app IDs?</summary>
 
-Use an [external parameter](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) for `appId` and pass it when you run Maestro. For example, pass `APP_ID` when testing with the Maestro CLI:
+Use an [external parameter](../../flows/flow-control-and-logic/parameters-and-constants.md) for `appId` and pass it when you run Maestro. For example, pass `APP_ID` when testing with the Maestro CLI:
 
 ```bash
 maestro test -e APP_ID=your.app.id file.yaml
@@ -42,7 +42,7 @@ Maestro treats `$` as the start of a variable. Escape the dollar so it is treate
 
 <summary>How do I compare two values?</summary>
 
-To assert on values that appear on different screens, store each value in a variable with [`copyTextFrom`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/copytextfrom) and [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript), then compare in a `runFlow` with a `when` condition:
+To assert on values that appear on different screens, store each value in a variable with [`copyTextFrom`](../../api-reference/commands-available/copytextfrom.md) and [`evalScript`](../../api-reference/commands-available/evalscript.md), then compare in a `runFlow` with a `when` condition:
 
 ```yaml
 # Navigate to first value, then:
@@ -71,14 +71,14 @@ To assert on values that appear on different screens, store each value in a vari
 
 Maestro offers built-in support for random numbers, so you don't need to write external scripts.
 
-You can use the [`inputRandomNumber`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext#random-text-input-commands) command if you need to type the number directly into a field:
+You can use the [`inputRandomNumber`](../../api-reference/commands-available/inputtext.md#random-text-input-commands) command if you need to type the number directly into a field:
 
 ```yaml
 - inputRandomNumber:
     length: 8
 ```
 
-Another option is to use Faker. Use this option if you need to store the number in a variable or use it within a specific range, use the built-in [`faker`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/generate-synthetic-data) library via `evalScript`:
+Another option is to use Faker. Use this option if you need to store the number in a variable or use it within a specific range, use the built-in [`faker`](../../flows/javascript/generate-synthetic-data.md) library via `evalScript`:
 
 ```yaml
 - evalScript: ${output.thisNumber = faker.expression("#{number.numberBetween '1' '10'}")}

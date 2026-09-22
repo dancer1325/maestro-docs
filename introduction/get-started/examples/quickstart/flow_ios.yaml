@@ -1,0 +1,17 @@
+appId: com.apple.MobileAddressBook
+---
+- launchApp
+- tapOn: All iPhone
+- tapOn: Add
+- tapOn: First name
+- inputText: John
+- tapOn: Last name
+- inputText: Doe
+- tapOn: Company
+- inputText: Maestro
+- tapOn: John
+- tapOn: add phone
+- inputText: +1 111-111-1111
+- tapOn: Done
+- tapOn: Back
+- takeScreenshot: All Contacts

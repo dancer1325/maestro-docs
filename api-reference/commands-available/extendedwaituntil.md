@@ -45,4 +45,4 @@ This example waits up to 10 seconds for an element with the ID `elementId` to di
 
 ### Related content
 
-Learn [how to use wait commands](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/wait-commands) in Maestro to create reliable tests.
+Learn [how to use wait commands](../../flows/flow-control-and-logic/wait-commands.md) in Maestro to create reliable tests.

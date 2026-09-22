@@ -130,7 +130,7 @@ Use a standard (non-hardened) Android device or emulator for your Maestro tests,
 
 #### What is happening
 
-When testing Android apps, the [`inputText`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext) command does not work as expected when the input contains non-ASCII characters.
+When testing Android apps, the [`inputText`](../../api-reference/commands-available/inputtext.md) command does not work as expected when the input contains non-ASCII characters.
 
 #### **Limitation**
 

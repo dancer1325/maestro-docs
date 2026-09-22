@@ -43,7 +43,7 @@ Maestro supports industry-standard formats to ensure compatibility with tools li
 {% hint style="info" %}
 #### CLI-dependent
 
-To generate reports, you must use the `--format` flag when running a test with the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/).
+To generate reports, you must use the `--format` flag when running a test with the [Maestro CLI](../../maestro-cli/README.md).
 
 It is not possible to define report generation directly in the `config.yaml` file.
 {% endhint %}
@@ -110,7 +110,7 @@ properties:
 
 #### Maestro Cloud metadata in test reports
 
-When you generate a report for tests executed on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme), Maestro adds properties that link each result back to the Cloud dashboard. You don't need to configure anything; they are added to the report automatically.
+When you generate a report for tests executed on [Maestro Cloud](../../cloud/README.md), Maestro adds properties that link each result back to the Cloud dashboard. You don't need to configure anything; they are added to the report automatically.
 
 | Property         | Element       | Description                                             |
 |------------------|---------------|---------------------------------------------------------|
@@ -184,8 +184,8 @@ Each session gets a timestamped folder inside the output directory, holding the 
 | `logs/`                | `maestro.log` scoped to this Flow, plus the device logs, whose filenames depend on the platform: Android writes `device-logcat.txt`, iOS writes `device-simulator.log` and `device-xctest.log`. Each device log's `metadata.source` in the manifest names the stream it came from — `emulator`, `simulator`, or `xctest`. A crash lands here as `crash-report.txt` on both platforms, though its contents differ: Android writes the stack trace taken from logcat, while iOS copies the simulator's `.ips` crash report verbatim, so that file holds JSON despite the `.txt` extension. On Android an ANR also lands, as `anr-report.txt`. Both are collected when the Flow ends, cover only the app under test, and only report an event from that Flow's own run, so there is at most one of each per Flow. |
 | `screenshots/`         | Step screenshots, named `step-<NNN>-<type>-<detail>.png`. In a normal `maestro test` session only the failing step is captured, so a passing Flow has no `screenshots/` folder at all.         |
 | `screen-hierarchy/`    | The view hierarchy as JSON, named to match the screenshot of the same step, for working out why a selector did not match. Captured alongside the step screenshots.                             |
-| `takeScreenshot/`      | Screenshots your Flow asked for with [`takeScreenshot`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/takescreenshot). Paths in that command resolve inside this folder.  |
-| `startRecording/`      | Videos your Flow asked for with [`startRecording`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/startrecording). Paths in that command resolve inside this folder.       |
+| `takeScreenshot/`      | Screenshots your Flow asked for with [`takeScreenshot`](../../api-reference/commands-available/takescreenshot.md). Paths in that command resolve inside this folder.  |
+| `startRecording/`      | Videos your Flow asked for with [`startRecording`](../../api-reference/commands-available/startrecording.md). Paths in that command resolve inside this folder.       |
 | `ai-analysis/`         | The screenshots that AI commands analyzed, together with the defects they reported. See [AI test analysis](ai-test-analysis.md).                                                              |
 
 {% hint style="info" %}

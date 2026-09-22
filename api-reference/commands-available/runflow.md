@@ -4,7 +4,7 @@ description: Execute a subflow file with optional environment variables.
 
 # runFlow
 
-The `runFlow` command executes a sequence of commands from another Flow file or from an inline definition. This command helps you modularize tests and reuse common sequences, such as a login process. Inline subflows (using the `commands` parameter) are especially useful for [conditional](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions) logic or for grouping a few steps under a clear `label`.
+The `runFlow` command executes a sequence of commands from another Flow file or from an inline definition. This command helps you modularize tests and reuse common sequences, such as a login process. Inline subflows (using the `commands` parameter) are especially useful for [conditional](../../flows/flow-control-and-logic/conditions.md) logic or for grouping a few steps under a clear `label`.
 
 ### Parameters
 
@@ -77,7 +77,7 @@ You can pass variables to the subflow using the `env` parameter. These variables
 
 #### When to use inline subflows
 
-Inline subflows fit [conditional](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions) logic or small groups of steps that don't need a separate file. Use a `label` so the step has a clear intent; otherwise, listing the commands directly is simpler.
+Inline subflows fit [conditional](../../flows/flow-control-and-logic/conditions.md) logic or small groups of steps that don't need a separate file. Use a `label` so the step has a clear intent; otherwise, listing the commands directly is simpler.
 
 #### Run an inline Flow
 
@@ -114,4 +114,4 @@ maestro cloud --app-file myApp.apk --flows ./myTestsFolder
 
 ### Related content
 
-Learn how to define parameters and set environment variables in Maestro Flows by accessing the [Parameters and constants](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants "mention") and [Broken link](/broken/spaces/mS3lsb9jRwfRHqddeRXG/pages/DLtBiFLCJpsE4uxGnPNx "mention") pages.
+Learn how to define parameters and set environment variables in Maestro Flows by accessing the [Parameters and constants](../../flows/flow-control-and-logic/parameters-and-constants.md "mention") and [Broken link](/broken/spaces/mS3lsb9jRwfRHqddeRXG/pages/DLtBiFLCJpsE4uxGnPNx "mention") pages.

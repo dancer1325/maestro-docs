@@ -92,14 +92,14 @@ The `maestro` object is a built-in utility that provides information about the c
 
 | Property             | Description                                                                                                                                                                                                           |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `maestro.copiedText` | Contains the text retrieved by the most recent  [`copyTextFrom`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/copytextfrom) command.                                                             |
+| `maestro.copiedText` | Contains the text retrieved by the most recent  [`copyTextFrom`](../../api-reference/commands-available/copytextfrom.md) command.                                                             |
 | `maestro.platform`   | <p>Identifies the OS:<br><br>- <code>ios</code><br>- <code>android</code><br>- <code>web</code><br><br>This is useful for <a href="../flow-control-and-logic/conditions.md">conditional</a> cross-platform logic.</p> |
 
 #### Capturing UI Text
 
 To move text from your application into your JavaScript logic:&#x20;
 
-1. Use the [`copyTextFrom`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/copytextfrom) command to store the content in the `maestro.copiedText` variable.
+1. Use the [`copyTextFrom`](../../api-reference/commands-available/copytextfrom.md) command to store the content in the `maestro.copiedText` variable.
 2. Access that content in your JavaScript code or Maestro commands using `maestro.copiedText`.
 
 The following example copies content from a `userName` element and uses it to send a dynamic message:

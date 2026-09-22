@@ -115,7 +115,7 @@ To use the `check_clipboard.yaml` Flow in your main test, you need to pass `EXPE
 
 Explore the following documentation pages if some of the concepts used in this example are not clear to you:
 
-* [Nested flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/nested-flows "mention"): Learn how to organize your tests by breaking them into smaller Flows.
-* [Conditions](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions "mention"): Take a closer look at how the `when` parameter allows you to write a single test that works across both iOS and Android.
-* [runFlow](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runflow "mention"): Review the details on how to use the `runFlow` command.
+* [Nested flows](../../flows/flow-control-and-logic/nested-flows.md "mention"): Learn how to organize your tests by breaking them into smaller Flows.
+* [Conditions](../../flows/flow-control-and-logic/conditions.md "mention"): Take a closer look at how the `when` parameter allows you to write a single test that works across both iOS and Android.
+* [runFlow](../../api-reference/commands-available/runflow.md "mention"): Review the details on how to use the `runFlow` command.
 

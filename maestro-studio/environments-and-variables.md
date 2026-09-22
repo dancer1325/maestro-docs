@@ -73,6 +73,6 @@ To take the next step with Maestro Studio, learn how to run your tests using the
 
 If you want to deepen your understanding of how Maestro works, explore the related documentation:
 
-* [**Parameters and constants**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants)**:** Pass dynamic values to tests using parameters and inline constants.
-* [**Test discovery and tags**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags)**:** Organize tests with tags and control which tests run using include/exclude filters.
-* [**Conditions**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions): Execute commands conditionally based on visibility, platform, or custom expressions.
+* [**Parameters and constants**](../flows/flow-control-and-logic/parameters-and-constants.md)**:** Pass dynamic values to tests using parameters and inline constants.
+* [**Test discovery and tags**](../flows/workspace-management/test-discovery-and-tags.md)**:** Organize tests with tags and control which tests run using include/exclude filters.
+* [**Conditions**](../flows/flow-control-and-logic/conditions.md): Execute commands conditionally based on visibility, platform, or custom expressions.

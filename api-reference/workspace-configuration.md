@@ -4,32 +4,45 @@ description: >-
   settings.
 ---
 
-# Workspace configuration
+* goal
+  * configure global settings for your Maestro workspace to customize behavior across all flows.
 
-This page provides a technical reference for all properties you can set in the `config.yaml` file. The configuration is structured into Global, Execution, Platform-specific, and Cloud sections.
+# Workspace configuration -- "config.yaml" --
 
-### Global workspace settings
+* "config.yaml"
+  * == workspace configuration file
+  * ways to place
+    * | your project's 
+      * root
+      * ".maestro/"
+  * sections
+    * Global
+    * Execution
+    * Platform-specific
+    * Maestro Cloud
 
-These settings define the identity of your application and how Maestro discovers your Flow files.
+### global
 
-| Key                                                                                                               | Description                                                                                                                                            |
-| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`flows`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)                                                        | Glob patterns defining which files to include in a test suite. Defaults to `*` (only YAML files in the root folder). Use `**` for recursive discovery. Prefix a pattern with `!` to exclude matching files; at least one positive pattern is required. |
-| [`testOutputDir`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-reports-and-artifacts) | Custom directory where screenshots, logs, and metadata are saved. Defaults to `~/.maestro/tests/`.                                                     |
+TODO:  define the identity of your application and how Maestro discovers your Flow files.
 
-#### Execution and filtering
+| Key                                                                         | Description                                                                                                                                                                                                                                                           |
+|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`flows`](../flows/README.md)                  | Glob patterns defining which files to include in a test suite <br/> Defaults to `*` (only YAML files in the root folder) <br/> Use `**` for recursive discovery <br/> Prefix a pattern with `!` to exclude matching files; at least one positive pattern is required. |
+| [`testOutputDir`](../flows/workspace-management/test-reports-and-artifacts) | == directory \| save screenshots + logs + metadata  <br/> by default, "~/.maestro/tests/"                                                                                                                                                                             |
+
+### Execution & filtering
 
 Use these keys to control the order and selection of tests during a suite run.
 
 | **Key**                                                                                                                        | **Description**                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| [`includeTags`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags)                   | Only executes Flows that contain at least one of these tags in their internal configuration.       |
-| [`excludeTags`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags)                   | Skips any Flows that contain one or more of these tags.                                            |
-| [`executionOrder`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/sequential-execution)                   | A nested object used to force a specific sequence of Flows.                                        |
-| [`executionOrder.continueOnFailure`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/sequential-execution) | If `false`, Maestro stops the sequential execution immediately if a Flow fails. Default is `true`. |
-| [`executionOrder.flowsOrder`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/sequential-execution)        | The ordered list of Flow names or filenames (without `.yaml`) to execute sequentially.             |
+| [`includeTags`](../flows/workspace-management/test-discovery-and-tags.md)                   | Only executes Flows that contain at least one of these tags in their internal configuration.       |
+| [`excludeTags`](../flows/workspace-management/test-discovery-and-tags.md)                   | Skips any Flows that contain one or more of these tags.                                            |
+| [`executionOrder`](../flows/workspace-management/sequential-execution.md)                   | A nested object used to force a specific sequence of Flows.                                        |
+| [`executionOrder.continueOnFailure`](../flows/workspace-management/sequential-execution.md) | If `false`, Maestro stops the sequential execution immediately if a Flow fails. Default is `true`. |
+| [`executionOrder.flowsOrder`](../flows/workspace-management/sequential-execution.md)        | The ordered list of Flow names or filenames (without `.yaml`) to execute sequentially.             |
 
-#### Platform configuration
+### Platform configuration
 
 Platform-specific settings allow you to optimize the environment for Android or iOS.
 
@@ -42,9 +55,9 @@ Platform-specific settings allow you to optimize the environment for Android or 
 | --------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | `disableAnimations`         | **(Cloud only)** Disables system-level window, transition, and animator animations on the Android Emulator. |
 
-#### Maestro cloud configuration
+### Maestro cloud configuration
 
-These properties are used only when running tests on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme).
+These properties are used only when running tests on [Maestro Cloud](../cloud/README.md).
 
 | **Key**                          | **Description**                                                       |
 | -------------------------------- | --------------------------------------------------------------------- |
@@ -53,43 +66,3 @@ These properties are used only when running tests on [Maestro Cloud](https://app
 | `notifications.email.enabled`    | Set to `true` to enable email notifications.                          |
 | `notifications.email.recipients` | A list of email addresses to receive the test reports.                |
 | `notifications.slack.endpoint`   | The Webhook URL for posting results directly to a Slack channel.      |
-
-### Usage example
-
-The following example shows a typical Maestro workspace configuration file. This file must be named `config.yaml`. You can place it at the root of your project or in the `.maestro` directory:
-
-```yaml
-# config.yaml
-flows:
-  - 'subFolder/*'
-  - 'anotherSubfolder/**'
-  - '!anotherSubfolder/helper.yaml' # Exclude files with a '!' prefix
-includeTags:
-  - tagNameToInclude
-excludeTags:
-  - tagNameToExclude
-executionOrder:
-  continueOnFailure: false # default is true
-  flowsOrder:
-    - flowA
-    - flowB
-
-# Customised test output directory
-testOutputDir: test_output_directory
-
-# Cloud only config options
-baselineBranch: main
-notifications:
-  email:
-    enabled: true
-    recipients:
-      - john@example.com
-
-# Platform Configuration
-platform:
-  ios:
-    snapshotKeyHonorModalViews: false
-    disableAnimations: true
-  android:
-    disableAnimations: true
-```

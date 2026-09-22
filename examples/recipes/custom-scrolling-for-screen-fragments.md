@@ -6,7 +6,7 @@ description: >-
 
 # Custom scrolling for screen fragments
 
-Maestro’s native [`scrollUntilVisible`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/scrolluntilvisible) is a powerful tool, but it works in a specific way:
+Maestro’s native [`scrollUntilVisible`](../../api-reference/commands-available/scrolluntilvisible.md) is a powerful tool, but it works in a specific way:
 
 1. Checks for the element defined by the selector.
 2. Swipe up from the center of the screen.
@@ -109,5 +109,5 @@ To use this helper in your main Flow, call it with `runFlow` and pass the `TARGE
 
 Explore the following documentation pages if some of the concepts used in this recipe are not clear for you:
 
-* [swipe](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/swipe "mention"): Learn how to use coordinates, durations, and percentages to move around the screen.
-* [Loops](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/loops "mention"): Understand the difference between looping a fixed number of times vs. looping based on a condition.
+* [swipe](../../api-reference/commands-available/swipe.md "mention"): Learn how to use coordinates, durations, and percentages to move around the screen.
+* [Loops](../../flows/flow-control-and-logic/loops.md "mention"): Understand the difference between looping a fixed number of times vs. looping based on a condition.

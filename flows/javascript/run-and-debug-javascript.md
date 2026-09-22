@@ -28,7 +28,7 @@ Learn how to [generate synthetic data](generate-synthetic-data.md) using JavaScr
 
 #### 2. The `evalScript` Command
 
-Use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript) for logic-only steps that do not directly interact with a UI element, such as setting a variable or performing a calculation.
+Use [`evalScript`](../../api-reference/commands-available/evalscript.md) for logic-only steps that do not directly interact with a UI element, such as setting a variable or performing a calculation.
 
 ```yaml
 - evalScript: ${output.timestamp = new Date().getTime()} # Store data for later use
@@ -37,7 +37,7 @@ Use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-avail
 
 #### 3. The `runScript` Command
 
-For complex logic, reusable functions, or long scripts, use [`runScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runscript) to execute an external `.js` file.
+For complex logic, reusable functions, or long scripts, use [`runScript`](../../api-reference/commands-available/runscript.md) to execute an external `.js` file.
 
 You can pass environment variables to your script using the `env` attribute, in the same way you pass parameters to subflows. First, use `runScript` to define the JavaScript file and the variables to be shared with it:
 
@@ -75,7 +75,7 @@ console.log(`Value is ${myVar}`) // template literals
 
 #### Logging with `evalScript` command <a href="#logging-with-evalscript-command" id="logging-with-evalscript-command"></a>
 
-If you want to log something inline, you can use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript) to output it to the console without creating a separate file.
+If you want to log something inline, you can use [`evalScript`](../../api-reference/commands-available/evalscript.md) to output it to the console without creating a separate file.
 
 ```yaml
 - evalScript: '${console.log("Value: " + myVar)}'

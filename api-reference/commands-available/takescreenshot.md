@@ -50,7 +50,7 @@ You can also group screenshots into subdirectories of the artifact folder.
 
 ### Artifact paths
 
-Maestro writes this command's output into the `takeScreenshot` folder of the Flow's artifact bundle. See [Layout of a Flow's artifact folder](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-reports-and-artifacts#layout-of-a-flows-artifact-folder).
+Maestro writes this command's output into the `takeScreenshot` folder of the Flow's artifact bundle. See [Layout of a Flow's artifact folder](../../flows/workspace-management/test-reports-and-artifacts.md#layout-of-a-flows-artifact-folder).
 
 The `path` must name a file, and must not attempt to escape the artifacts folder. Maestro rejects the command with an `Invalid path` error (and will fail the flow) if the value:
 
@@ -67,9 +67,9 @@ If the file cannot be written (e.g. full disk or read-only destination), the Flo
 {% hint style="info" %}
 **Maestro CLI**
 
-If you are using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), you can override the default output location with the `--test-output-dir` flag when running `maestro test` or with `testOutputDir` in your workspace config. See [Test reports and artifacts](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-reports-and-artifacts) for details.
+If you are using the [Maestro CLI](../../maestro-cli/README.md), you can override the default output location with the `--test-output-dir` flag when running `maestro test` or with `testOutputDir` in your workspace config. See [Test reports and artifacts](../../flows/workspace-management/test-reports-and-artifacts.md) for details.
 {% endhint %}
 
 ### Related content
 
-Check the [Test reports and artifacts](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-reports-and-artifacts "mention") to learn how to configure the output directory.
+Check the [Test reports and artifacts](../../flows/workspace-management/test-reports-and-artifacts.md "mention") to learn how to configure the output directory.

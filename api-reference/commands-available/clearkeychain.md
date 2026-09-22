@@ -35,4 +35,4 @@ If you want to clear the Keychain every time the app starts without adding a sep
 
 ### Related content
 
-You can use [Hooks](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/hooks) to automate Keychain clearing across all your tests.
+You can use [Hooks](../../flows/flow-control-and-logic/hooks.md) to automate Keychain clearing across all your tests.

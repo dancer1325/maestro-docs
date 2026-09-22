@@ -98,7 +98,7 @@ This flow utilizes several advanced Maestro features to handle out-of-app or non
 
 #### **2. Implementation**
 
-You can run this Flow directly to test the onboarding experience on an Android emulator. If you have the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/) installed, you can run the following command in your terminal to execute the test:
+You can run this Flow directly to test the onboarding experience on an Android emulator. If you have the [Maestro CLI](../../maestro-cli/README.md) installed, you can run the following command in your terminal to execute the test:
 
 ```bash
 maestro test facebook.yaml
@@ -108,5 +108,5 @@ maestro test facebook.yaml
 
 Explore these pages to master the interaction commands used in this example:
 
-* [longPressOn](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/longpresson "mention"): Learn how to trigger long-press events for context menus and system pickers.
-* [inputText](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext "mention"): Discover all the randomized data types Maestro can generate.
+* [longPressOn](../../api-reference/commands-available/longpresson.md "mention"): Learn how to trigger long-press events for context menus and system pickers.
+* [inputText](../../api-reference/commands-available/inputtext.md "mention"): Discover all the randomized data types Maestro can generate.

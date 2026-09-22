@@ -22,8 +22,8 @@ The following table lists the available conditions you can use to define the con
 
 | Condition    | Description                                                                                                                                                                                       |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `visible`    | Executed if the element matching the selector is visible. The element must be defined using one or more [Selectors](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors "mention").          |
-| `notVisible` | Executed if the element matching the selector is **not** visible. The element must be defined using one or more  [Selectors](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors "mention"). |
+| `visible`    | Executed if the element matching the selector is visible. The element must be defined using one or more [Selectors](../../api-reference/selectors/README.md "mention").          |
+| `notVisible` | Executed if the element matching the selector is **not** visible. The element must be defined using one or more  [Selectors](../../api-reference/selectors/README.md "mention"). |
 | `platform`   | Executed if the current platform matches (`Android`, `iOS`, or `Web`).                                                                                                                            |
 | `true`       | Executed if the JavaScript expression evaluates to `true`.                                                                                                                                        |
 
@@ -58,7 +58,7 @@ Sometimes an element may or may not appear, such as a "Rate this App" popup or a
 
 {% tabs %}
 {% tab title="The runFlow / when block" %}
-This is the most idiomatically expressive way to handle conditions. It clearly defines the intent "Only run these commands _when_ this condition is met." You combine [`runFlow`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runflow) and `when`:&#x20;
+This is the most idiomatically expressive way to handle conditions. It clearly defines the intent "Only run these commands _when_ this condition is met." You combine [`runFlow`](../../api-reference/commands-available/runflow.md) and `when`:&#x20;
 
 ```yaml
 - runFlow:

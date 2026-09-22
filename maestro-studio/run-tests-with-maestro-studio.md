@@ -11,7 +11,7 @@ Maestro Studio is a visual desktop app that simplifies mobile test automation. T
 
 ### Prerequisites&#x20;
 
-Before building your test, ensure you have a running Android emulator. Access the [QuickStart](https://app.gitbook.com/s/CbCMt5C3rawmE9oIus7f/get-started/quickstart) for further guidance on setting up your virtual environment.&#x20;
+Before building your test, ensure you have a running Android emulator. Access the [QuickStart](../introduction/get-started/quickstart.md) for further guidance on setting up your virtual environment.&#x20;
 
 {% stepper %}
 {% step %}
@@ -101,4 +101,4 @@ Now that you have created a test using the interactive features of Maestro Studi
 * [Environments and variables](environments-and-variables.md): Learn how to pass dynamic data like names or phone numbers using variables.
 * [Run cloud tests from Maestro Studio](run-cloud-tests-from-maestro-studio.md): Learn how to execute this test on using Maestro Cloud.
 
-To learn more about test structure and advanced logic, visit the [Maestro Flows documentation](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/).
+To learn more about test structure and advanced logic, visit the [Maestro Flows documentation](../flows/README.md).

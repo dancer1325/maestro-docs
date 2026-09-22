@@ -1,0 +1,8 @@
+appId: com.apple.MobileAddressBook
+---
+- launchApp
+- tapOn: "John Appleseed"
+- tapOn: "Edit"
+- tapOn: "Add phone"
+- inputText: "123123"
+- tapOn: "Done"

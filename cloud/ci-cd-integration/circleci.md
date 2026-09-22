@@ -203,7 +203,7 @@ You can customize the upload behavior using additional CLI flags:
 * `--async`: Exit the CLI immediately after the upload is complete, without waiting for test results.
 * `-e`: Pass environment variables (e.g., `-e STAGE=prod`).
 
-For a complete list of options, see the [`cloud` subcommand options](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud) in the Maestro CLI documentation.
+For a complete list of options, see the [`cloud` subcommand options](../../maestro-cli/maestro-cli-commands-and-options.md#cloud) in the Maestro CLI documentation.
 
 #### Next steps
 
@@ -212,5 +212,5 @@ Now that your CI pipeline is connected, consider optimizing your cloud runs:
 * Set up notifications via [Slack](../notifications/set-slack-notification.md), [email](../notifications/set-email-notification.md), or [webhooks](../notifications/configure-webhooks.md) to stay informed about build and test results.
 * [Configure the operating system](../environment-configuration/configure-the-os.md) for your runs to match your application and dependency requirements.
 * Define [locales and time zones](../environment-configuration/app-locales-and-device-timezones.md) to ensure consistent behavior across environments and regions.
-* Explore all the [subcommand options for `cloud`.](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud)
+* Explore all the [subcommand options for `cloud`.](../../maestro-cli/maestro-cli-commands-and-options.md#cloud)
 

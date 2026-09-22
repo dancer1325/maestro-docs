@@ -73,7 +73,7 @@ Some flags, like `disableAnimations`, are a cloud-only feature and does not affe
 {% endstepper %}
 
 {% hint style="info" %}
-&#x20;If you need a list of all configurations available to configure your test suite, access the [Workspace configuration](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/workspace-configuration "mention") reference.
+&#x20;If you need a list of all configurations available to configure your test suite, access the [Workspace configuration](../../api-reference/workspace-configuration.md "mention") reference.
 {% endhint %}
 
 ### Working with multiple configs
@@ -86,7 +86,7 @@ maestro test --config .maestro/ci-config.yaml tests/
 
 ### Next steps
 
-If you need a full list of every available key and configuration available, access the  [Workspace configuration](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/workspace-configuration "mention") reference page.
+If you need a full list of every available key and configuration available, access the  [Workspace configuration](../../api-reference/workspace-configuration.md "mention") reference page.
 
 To plan your test architecture access [design-your-test-architecture](design-your-test-architecture/ "mention"). On the other hand, if you need to organize your tests, learn how to use the `flows` key in your config to manage [test-discovery-and-tags.md](test-discovery-and-tags.md "mention").
 

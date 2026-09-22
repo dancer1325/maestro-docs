@@ -45,13 +45,13 @@ Maestro connects to your target via ADB (Android Debug Bridge).
 
 ### Cross-platform configuration
 
-If your Android and iOS applications use different identifiers, we recommend using [environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) to keep your [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/) cross-platform.
+If your Android and iOS applications use different identifiers, we recommend using [environment variables](../../../../flows/flow-control-and-logic/parameters-and-constants.md) to keep your [Flows](../../../../flows/README.md) cross-platform.
 
 You can manage these variables in three primary ways:
 
-1. **Maestro Studio**: Configured via the [Environment Manager](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environments-and-variables).
-2. [**Maestro CLI**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#passing-parameters-via-cli): Passed as arguments during execution.
-3. **Flow Configuration**: Defined directly in the [config matter](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#constants) at the top of an individual Flow file.
+1. **Maestro Studio**: Configured via the [Environment Manager](../../../../maestro-studio/environments-and-variables.md).
+2. [**Maestro CLI**](../../../../flows/flow-control-and-logic/parameters-and-constants.md#passing-parameters-via-cli): Passed as arguments during execution.
+3. **Flow Configuration**: Defined directly in the [config matter](../../../../flows/flow-control-and-logic/parameters-and-constants.md#constants) at the top of an individual Flow file.
 
 To run a single test suite against different platforms where the App ID varies, structure your Flow to use a variable:
 
@@ -62,7 +62,7 @@ appId: ${APP_ID}
 - launchApp
 ```
 
-When executing locally with the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/), use the `-e` or `--env` flag to inject the correct identifier for that specific run:
+When executing locally with the [Maestro CLI](../../../../maestro-cli/README.md), use the `-e` or `--env` flag to inject the correct identifier for that specific run:
 
 ```bash
 maestro test -e APP_ID=com.example.android flow.yaml
@@ -72,7 +72,7 @@ maestro test --env APP_ID=com.example.android flow.yaml
 
 ### Maestro Cloud
 
-When your suite grows, local sequential execution becomes a bottleneck. [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) spins up multiple virtual Android devices to run your tests in parallel.
+When your suite grows, local sequential execution becomes a bottleneck. [Maestro Cloud](../../../../cloud/README.md) spins up multiple virtual Android devices to run your tests in parallel.
 
 | **Feature**         | **Local Android**  | **Maestro Cloud**                  |
 | ------------------- | ------------------ | ---------------------------------- |
@@ -86,8 +86,8 @@ Explore the dedicated [Android Native](android-native.md) and [Jetpack Compose](
 
 If you already know the Maestro solution you are going to use, access the desired documentation:
 
-* [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/)
-* [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)
+* [Maestro Studio](../../../../maestro-studio/README.md)
+* [Maestro CLI](../../../../maestro-cli/README.md)
+* [Maestro Cloud](../../../../cloud/README.md)
 
 If you are new to the platform, follow the [QuickStart](../../quickstart.md) guide to get up and running in minutes.

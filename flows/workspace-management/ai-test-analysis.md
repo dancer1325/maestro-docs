@@ -68,8 +68,8 @@ Hey, we analyzed your flow for spelling, grammar, and internationalization issue
 
 You can integrate AI directly into your YAML Flow logic using specialized commands:
 
-* [`assertWithAI`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertwithai): Verify complex UI states using natural language (e.g., "Verify the user is shown a success message in Spanish").
-* [`assertNoDefectsWithAI`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertnodefectswithai): Perform a visual audit of the current screen to find common UI issues.
+* [`assertWithAI`](../../api-reference/commands-available/assertwithai.md): Verify complex UI states using natural language (e.g., "Verify the user is shown a success message in Spanish").
+* [`assertNoDefectsWithAI`](../../api-reference/commands-available/assertnodefectswithai.md): Perform a visual audit of the current screen to find common UI issues.
 
 #### Disable analysis notifications
 
@@ -81,5 +81,5 @@ export MAESTRO_CLI_ANALYSIS_NOTIFICATION_DISABLED=true
 
 ### Next steps
 
-Learn more about specific assertions in the [`assertWithAI`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertwithai) and [`assertNoDefectsWithAI`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertnodefectswithai) command reference pages.
+Learn more about specific assertions in the [`assertWithAI`](../../api-reference/commands-available/assertwithai.md) and [`assertNoDefectsWithAI`](../../api-reference/commands-available/assertnodefectswithai.md) command reference pages.
 

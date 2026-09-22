@@ -4,213 +4,148 @@ description: >-
   test in five minutes.
 ---
 
-# QuickStart
+* goal
+  * how to 
+    * install [Maestro Studio](../../maestro-studio/README.md)
+    * set up your environment
+    * execute your flow 
 
-You are starting your journey with Maestro. This guide will help you install [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/), set up your environment, and execute your first automated test (called a **Flow**) in just five minutes.
+# steps
+## Platform-specific setup
 
-{% stepper %}
-{% step %}
-#### Platform-specific setup
+### | Android
 
-Maestro requires a running target device to execute your tests. Use the tabs below to configure your virtual environment.
+* steps
+  * [download & install Android Studio](https://developer.android.com/studio)
+  * | Android Studio,
+    * \> "More Actions" > "Virtual Device Manager" > "Create Virtual Device (+)" > select a modern device > Start
 
-{% tabs %}
-{% tab title="Android" %}
-1. Download the latest version of Android Studio from the [official site](https://developer.android.com/studio) and install it.
-2. Open Android Studio, click **More Actions**, and select **Virtual Device Manager**.
-3. Click **Create Virtual Device (+)**, select a modern device (e.g., Pixel 8), and download a system image (API 31 or higher is recommended).
+* supported Android API
+  * 29, 30, 31, 33, and 34
+  * | Q2 2026,
+    * 35 & 36
 
-{% hint style="info" %}
-Maestro currently supports **API Levels 29, 30, 31, 33, and 34**. API 35 and 36 support is arriving in Q2 2026.
-{% endhint %}
+### | iOS
 
-4. Finish the wizard and click the **Play** button to start the emulator.
-{% endtab %}
+* steps
+  * [download & install Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+  * | Xcode,
+    * \> `Settings > Locations` > ensure the "Command Line Tools" are selected
+    * \> `Xcode > Open Developer Tool > Simulator` > launch the simulator
+      * if there is NO device is AVAILABLE -> 
+        * SOLUTIONS:
+          * SOLUTION1: `Xcode > Settings > Platforms` > ensure an iOS runtime (iOS 16, 17, 18, or 24) is installed
+          * SOLUTION2: if you installed Xcode WITHOUT opening it (_Example:_ -- via -- [`xcodes`](https://github.com/XcodesOrg/xcodes) OR scripted install) -> macOS may NOT have installed Xcode's required system components 
+            * -> 
+              * CoreSimulator framework is missing
+              * simulators will NOT load
 
-{% tab title="iOS" %}
-1. Download Xcode from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and install it.
-2. Open Xcode, go to `Settings > Locations`, and ensure the **Command Line Tools** are selected.
-3. Open Xcode and go to `Xcode > Open Developer Tool > Simulator` to launch the simulator.
-4. If no device is available, go to `Xcode > Settings > Platforms` and ensure an iOS runtime (iOS 16, 17, 18, or 24) is installed.
+            ```bash
+            xcodebuild -runFirstLaunch
+            
+            # If you're prompted to accept the license first, run:
+            
+            sudo xcodebuild -license accept
+            
+            # Then restart Maestro Studio
+            # iOS simulators should now appear.
+            ```
 
-{% hint style="warning" %}
-**Xcode is installed but no iOS simulators appear?**
+## install Maestro Studio
 
-If you installed Xcode without opening it (for example via [`xcodes`](https://github.com/XcodesOrg/xcodes) or a scripted install), macOS may not have installed Xcode's required system components - so the CoreSimulator framework is missing and simulators won't load. In Maestro Studio this shows up as no iOS devices in the device list.
-
-Complete the one-time component install:
-
-```bash
-xcodebuild -runFirstLaunch
-
-# If you're prompted to accept the license first, run:
-
-sudo xcodebuild -license accept
-
-# Then restart Maestro Studio
-# iOS simulators should now appear.
-```
-{% endhint %}
-{% endtab %}
-{% endtabs %}
-{% endstep %}
-
-{% step %}
-#### Installation
-
-Download the appropriate installer for your operating system:
-
-* **Windows:** [MaestroStudio.exe](https://studio.maestro.dev/MaestroStudio.exe)
-* **macOS:** [MaestroStudio.dmg](https://studio.maestro.dev/MaestroStudio.dmg)
-* **Linux:** [MaestroStudio.AppImage](https://studio.maestro.dev/MaestroStudio.AppImage)
-
-Follow the platform-specific installation prompts:
-
-* **Windows:** Double-click the `.exe` and follow the setup wizard.
-* **macOS:** Open the `.dmg` and drag Maestro Studio to your `Applications` folder.
-*   **Linux:** Make the `.AppImage` executable and run it with the `--no-sandbox` flag:
+* -- based on -- OS
+  * | [Windows](https://studio.maestro.dev/MaestroStudio.exe)
+  * | [macOS](https://studio.maestro.dev/MaestroStudio.dmg)
+  * | [Linux](https://studio.maestro.dev/MaestroStudio.AppImage)
 
     ```bash
     chmod +x MaestroStudio.AppImage
     ./MaestroStudio.AppImage --no-sandbox
     ```
-{% endstep %}
 
-{% step %}
-#### Create your first test
+## Create your first test
 
-Once your device is running and Maestro Studio is open, you can create your first Flow.
+* steps
+  * | Maestro Studio,
+    * \> "Choose new workspace location" (== place | store your tests) > "No device connected" > choose your running Android Emulator OR iOS Simulator 
+      * ways
+        * FROM scratch
+          * \> "Create a new test"
 
-1. Open Maestro Studio and click **Choose new workspace location** to define the directory on your computer to store your tests.
+            ![](../.gitbook/assets/quickstart-create-a-new-test (1).png)
 
-<figure><img src="../.gitbook/assets/quickstart-1.png" alt=""><figcaption></figcaption></figure>
+          * | "Add a new test to your workspace" > select "Mobile Test" >
+            * | Android
+              * Name == Name for your YAML file.
+              * App Id == From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.google.android.contacts** from the dropdown menu.
 
-2. Click the **No device connected** button at the top. Select your running Android Emulator or iOS Simulator from the list. The virtual device will pop up.
-3. Click **Create a new test** to open the setup window.
+              ![](../.gitbook/assets/image (6).png)
+            * | iOS
+              * Name == Name for your YAML file.
+              * App Id == From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.apple.MobileAddressBook** from the dropdown menu.
 
-<figure><img src="../.gitbook/assets/quickstart-create-a-new-test (1).png" alt=""><figcaption></figcaption></figure>
+              ![](../.gitbook/assets/image (7).png)
+        * FROM EXISTING app
+          * \> "Scan file for App Id" option > choose a ".apk" (Android) OR ".app/.zip" (iOS) > "Create Test"
+            * == AUTOMATICALLY detect the identifier 
+            * generate a MINIMAL "*.yaml" / launch the app
 
-4. On the **Add a new test to your workspace** window, select **Mobile Test** and enter the following:
+              ```yaml
+              appId: com.google.android.contacts
+              ---
+              - launchApp:
+                  clearState: true
+              ```
 
-{% tabs %}
-{% tab title="Android" %}
-* **Name**: Name for your YAML file.
-* **App Id**: From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.google.android.contacts** from the dropdown menu.
+              ```yaml
+              appId: com.apple.MobileAddressBook 
+              ---
+              - launchApp:
+                  clearState: true
+              ```
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
+## Run your FIRST test
 
-{% tab title="iOS" %}
-* **Name**: Name for your YAML file.
-* **App Id**: From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.apple.MobileAddressBook** from the dropdown menu.
-
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-{% endtabs %}
-
-{% hint style="info" %}
-You can also use the **Scan file for App Id** option to automatically detect the identifier from an `.apk` (Android) or `.app/.zip` (iOS) file.
-
-You can also add tags to keep your tests organized.
-{% endhint %}
-
-6. Click **Create Test**. Maestro will generate a minimal YAML file to launch the app.
-
-{% tabs %}
-{% tab title="Android" %}
-```yaml
-appId: com.google.android.contacts
----
-- launchApp:
-    clearState: true
-```
-{% endtab %}
-
-{% tab title="iOS" %}
-```yaml
-appId: com.apple.MobileAddressBook 
----
-- launchApp:
-    clearState: true
-```
-{% endtab %}
-{% endtabs %}
-{% endstep %}
-
-{% step %}
-#### Run your first test
-
+* steps
 With your first YAML file created, let's add a few commands to perform a search.
 
-In the Maestro Studio editor, copy and paste the example below for your platform.
 
 {% tabs %}
 {% tab title="Android" %}
-```yaml
-appId: com.google.android.contacts
----
-- launchApp:
-    clearState: true
-- tapOn: Allow
-- tapOn: Create contact
-- tapOn: First name
-- inputText: John
-- tapOn: Last name
-- inputText: Doe
-- tapOn: Company
-- inputText: Maestro
-- tapOn: "+1"
-- inputText: 111-111-1111
-- tapOn: Save
-- back
-- takeScreenshot: All Contacts
-```
 
-The test launches the native Contacts app, creates a new entry, saves it, and captures a screenshot.
 
 {% hint style="info" %}
-To learn more about the commands you can use to create tests, access the [Commands](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
+To learn more about the commands you can use to create tests, 
+access the [Commands](../../api-reference/README.md "mention")page.
 
-To learn about how you can structure tests, also referred to in Maestro as Flows, access the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/ "mention").
-{% endhint %}
+To learn about how you can structure tests, also referred to in Maestro as Flows, 
 
-After pasting, click **Run Locally**. Watch your virtual device execute the steps automatically. Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
 
-<figure><img src="../.gitbook/assets/2026-02-15_18-41-27.gif" alt=""><figcaption></figcaption></figure>
+After pasting, click **Run Locally**
+* Watch your virtual device execute the steps automatically
+* Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
+
+![](../.gitbook/assets/2026-02-15_18-41-27.gif)
 {% endtab %}
 
 {% tab title="iOS" %}
 ```yaml
-appId: com.apple.MobileAddressBook 
----
-- launchApp
-- tapOn: All iPhone
-- tapOn: Add
-- tapOn: First name
-- inputText: John
-- tapOn: Last name
-- inputText: Doe
-- tapOn: Company
-- inputText: Maestro
-- tapOn: John
-- tapOn: add phone
-- inputText: +1 111-111-1111
-- tapOn: Done
-- tapOn: Back
-- takeScreenshot: All Contacts
+
 ```
 
 The test launches the Address Book app, adds a new contact, and saves the result.
 
 {% hint style="info" %}
-To learn more about the commands you can use to create tests, access the [Commands](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/HqSeOOzxPCLfnK9YzOkb/ "mention") page.
+To learn more about the commands you can use to create tests, access the [Commands](../../api-reference/README.md "mention") page.
 
-To learn about how you can structure tests, also referred to in Maestro as Flows, access the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/ "mention").
+To learn about how you can structure tests, also referred to in Maestro as Flows, access the [Flows](../../flows/README.md "mention").
 {% endhint %}
 
-After pasting, click **Run Locally**. Watch your virtual device execute the steps automatically. Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
+After pasting, click **Run Locally**
+* Watch your virtual device execute the steps automatically
+* Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
 
-<figure><img src="../.gitbook/assets/2026-02-15_18-26-33.gif" alt=""><figcaption></figcaption></figure>
+![](../.gitbook/assets/2026-02-15_18-26-33.gif)
 {% endtab %}
 {% endtabs %}
 {% endstep %}
@@ -225,19 +160,17 @@ While this QuickStart focuses on manual YAML, Maestro Studio offers three intera
 * **Insert Command**: Click the **Insert Command** button in the IDE to choose from a list of standard actions.
 * **Manual Entry**: Type commands directly into the YAML editor for precise control.
 
-<i class="fa-hand-point-right">:hand-point-right:</i> **Access** [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") **for more information.**
+<i class="fa-hand-point-right">:hand-point-right:</i> **Access** [Run tests with Maestro Studio](../../maestro-studio/run-tests-with-maestro-studio.md "mention") **for more information.**
 {% endhint %}
 
-### Video walkthrough
+## Video walkthrough
 
-Watch this step-by-step video to see the first test creation process in detail:
+* [here](https://www.youtube.com/watch?v=E7qwFwo_nu0) 
 
-{% embed url="https://www.youtube.com/watch?v=E7qwFwo_nu0" %}
-
-### Next steps
+## Next steps
 
 Now that you’ve seen the power of "arm's length" automation, explore these resources to master the ecosystem:
 
-* Visit the [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/ "mention") to learn how to use visual element inspection and the Live REPL to build tests without writing code from scratch.
-* If you prefer a programmatic approach or need to integrate tests into your CI/CD pipeline, head to the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/ "mention").
-* To learn the best practices for logic, modularity, and nesting, or learn how to add JavaScript scripts to your tests check out the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/ "mention").
+* Visit the [Maestro Studio](../../maestro-studio/README.md "mention") to learn how to use visual element inspection and the Live REPL to build tests without writing code from scratch.
+* If you prefer a programmatic approach or need to integrate tests into your CI/CD pipeline, head to the [Maestro CLI](../../maestro-cli/README.md "mention").
+* To learn the best practices for logic, modularity, and nesting, or learn how to add JavaScript scripts to your tests check out the [Flows](../../flows/README.md "mention").

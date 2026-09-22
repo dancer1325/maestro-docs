@@ -6,7 +6,7 @@ description: Reuse test logic by calling subflows from parent flows with runFlow
 
 As your test suite grows, you'll find that certain sequences of commands are repeated across multiple flows. Common examples include logging in, clearing app state, or navigating to a specific screen.
 
-Instead of duplicating these commands in every file, you can define them once in a separate flow and run them using the [`runFlow` ](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runflow)command. This approach, known as nesting flows, helps you adhere to the DRY (Don't Repeat Yourself) principle, making your tests easier to read, maintain, and optimize.
+Instead of duplicating these commands in every file, you can define them once in a separate flow and run them using the [`runFlow` ](../../api-reference/commands-available/runflow.md)command. This approach, known as nesting flows, helps you adhere to the DRY (Don't Repeat Yourself) principle, making your tests easier to read, maintain, and optimize.
 
 ### Basic usage
 
@@ -115,4 +115,4 @@ Use nested flows for setup and teardown routines. By isolating these steps, you 
 
 ### Next steps
 
-Check the [runFlow ](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runflow)command for technical details, or explore [Conditions](conditions.md) to add logic to your flows.
+Check the [runFlow ](../../api-reference/commands-available/runflow.md)command for technical details, or explore [Conditions](conditions.md) to add logic to your flows.

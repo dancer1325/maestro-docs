@@ -87,7 +87,7 @@ Because this flow interacts with the OS, it doesn't need to be part of your app'
 maestro test clean_device_android.yaml
 ```
 
-Alternatively, call it as a subflow in your main test to clear specific media after a download test completes, or automate this cleanup by calling it within a [Hook](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/hooks), adding it to `onFlowComplete` ensures your app is in a "neutral" state for the next test:
+Alternatively, call it as a subflow in your main test to clear specific media after a download test completes, or automate this cleanup by calling it within a [Hook](../../flows/flow-control-and-logic/hooks.md), adding it to `onFlowComplete` ensures your app is in a "neutral" state for the next test:
 
 {% tabs %}
 {% tab title="Subflow" %}
@@ -114,5 +114,5 @@ onFlowComplete:
 
 Explore these pages to learn more about the commands used to manage files and system navigation:
 
-* [Conditions](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions): Review how to use the `when` parameter to make your cleanup logic skip unnecessary steps.
-* [Hooks](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/hooks "mention"): Learn how to automatically trigger this cleanup flow before or after every test run.
+* [Conditions](../../flows/flow-control-and-logic/conditions.md): Review how to use the `when` parameter to make your cleanup logic skip unnecessary steps.
+* [Hooks](../../flows/flow-control-and-logic/hooks.md "mention"): Learn how to automatically trigger this cleanup flow before or after every test run.

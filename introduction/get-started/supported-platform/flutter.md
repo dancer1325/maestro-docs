@@ -68,7 +68,7 @@ As your app adds multi-language support or A/B tests, text-based labels can beco
 This feature was [contributed by the Maestro team to Flutter](https://github.com/flutter/engine/pull/47961) and is available in Flutter 3.19+.
 {% endhint %}
 
-This pattern creates a permanent link between your Dart code and your YAML [Flow ](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/)that never changes, even if you translate your app into 20 languages.
+This pattern creates a permanent link between your Dart code and your YAML [Flow ](../../../flows/README.md)that never changes, even if you translate your app into 20 languages.
 
 To use the pattern, the developer needs to assign a unique `identifier` that is invisible to the user but exposed to Maestro.
 
@@ -79,7 +79,7 @@ Semantics(
 )
 ```
 
-This way, the test can target that identifier using the `id` [selector](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors).
+This way, the test can target that identifier using the `id` [selector](../../../flows/flow-control-and-logic/how-to-use-selectors.md).
 
 ```yaml
 - tapOn:
@@ -111,8 +111,8 @@ Without this call, Maestro cannot find any elements — `assertVisible` and `tap
 
 If you don't know how to create tests with Maestro, access the [Quickstart](../quickstart.md) guide to get up and running in minutes.
 
-To learn how to create tests, refer to the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
+To learn how to create tests, refer to the [Flows](../../../flows/README.md) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
 
-* [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/)
-* [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)
+* [Maestro Studio](../../../maestro-studio/README.md)
+* [Maestro CLI](../../../maestro-cli/README.md)
+* [Maestro Cloud](../../../cloud/README.md)

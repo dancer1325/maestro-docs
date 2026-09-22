@@ -33,7 +33,7 @@ If the parameter is omitted, the default locale is `en_US`.
 {% hint style="info" %}
 #### Locales supported by Maestro&#xD;
 
-Check the [documentation](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/test-in-different-locales/locales-supported-by-maestro) to find the complete list of supported locales.
+Check the [documentation](../../flows/flow-control-and-logic/test-in-different-locales/README.md/locales-supported-by-maestro) to find the complete list of supported locales.
 {% endhint %}
 
 ### Default device timezones

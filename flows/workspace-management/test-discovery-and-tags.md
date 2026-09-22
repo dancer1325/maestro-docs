@@ -62,7 +62,7 @@ tags:
 # ... rest of the flow
 ```
 
-When running your tests using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), you can use the `--include-tags` or `--exclude-tags` flags to filter the execution on the fly.
+When running your tests using the [Maestro CLI](../../maestro-cli/README.md), you can use the `--include-tags` or `--exclude-tags` flags to filter the execution on the fly.
 
 * **Include**: `maestro test . --include-tags=smoke` (Runs only smoke tests).
 * **Exclude**: `maestro test . --exclude-tags=wip` (Runs everything _except_ work-in-progress tests).

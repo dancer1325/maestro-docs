@@ -4,7 +4,7 @@ description: Run an external JavaScript file and capture its output.
 
 # runScript
 
-The `runScript` command executes a specified JavaScript file. The script can access environment variables and set [output](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/manage-data-and-states) values for subsequent commands in the flow.
+The `runScript` command executes a specified JavaScript file. The script can access environment variables and set [output](../../flows/javascript/manage-data-and-states.md) values for subsequent commands in the flow.
 
 ### Parameters
 
@@ -98,9 +98,9 @@ If you do not include the script files in the upload, the execution fails with a
 
 ### Related content
 
-* [JavaScript overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-overview): Start exploring how to use JavaScript in your tests.
-* [JavaScript outputs](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/manage-data-and-states): Learn how to store and consume JavaScript outputs in Maestro flows.
-* [Parameters](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants): Learn how to define and use parameters in flows to make them reusable.
-* [Constants](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants): Learn how to define constant values and reuse them across your flows.
-* [Nested flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/nested-flows): Learn how to compose flows by calling one flow from another.
-* [Conditional execution](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions): Learn how to control flow execution using conditions and branching logic.
+* [JavaScript overview](../../flows/javascript/javascript-overview.md): Start exploring how to use JavaScript in your tests.
+* [JavaScript outputs](../../flows/javascript/manage-data-and-states.md): Learn how to store and consume JavaScript outputs in Maestro flows.
+* [Parameters](../../flows/flow-control-and-logic/parameters-and-constants.md): Learn how to define and use parameters in flows to make them reusable.
+* [Constants](../../flows/flow-control-and-logic/parameters-and-constants.md): Learn how to define constant values and reuse them across your flows.
+* [Nested flows](../../flows/flow-control-and-logic/nested-flows.md): Learn how to compose flows by calling one flow from another.
+* [Conditional execution](../../flows/flow-control-and-logic/conditions.md): Learn how to control flow execution using conditions and branching logic.

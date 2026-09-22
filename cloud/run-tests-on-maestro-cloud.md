@@ -6,7 +6,7 @@ description: Upload and execute your Maestro tests on Cloud infrastructure using
 
 Running your tests on Maestro Cloud provides reliable scaling, guaranteed parallelism, and seamless CI integration for your mobile and web applications.
 
-This guide explains how to execute your tests using Maestro Cloud via the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/).
+This guide explains how to execute your tests using Maestro Cloud via the [Maestro CLI](../maestro-cli/README.md).
 
 ### Prerequisites
 
@@ -14,7 +14,7 @@ Before running tests on Maestro Cloud, ensure you have the following:
 
 * **Maestro account:** [Sign up for a Maestro account](https://signin.maestro.dev/sign-up).
 * **Cloud plan:** Maestro Cloud requires a Cloud plan, which you can start as a trial from the [Maestro Dashboard](https://signin.maestro.dev/sign-up).
-* [**Maestro CLI**](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/how-to-install-maestro-cli)**:** Install the Maestro CLI on your local machine or CI environment.
+* [**Maestro CLI**](../maestro-cli/how-to-install-maestro-cli/README.md)**:** Install the Maestro CLI on your local machine or CI environment.
 
 {% hint style="info" %}
 #### Test your app
@@ -85,7 +85,7 @@ The following example demonstrates how to use these flags:
 maestro cloud --api-key <YOUR_API_KEY> --project-id <YOUR_PROJECT_ID> --app-file sample.apk --flows flow.yaml
 ```
 
-For a complete list of cloud command options, see the [Maestro CLI reference](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options).
+For a complete list of cloud command options, see the [Maestro CLI reference](../maestro-cli/maestro-cli-commands-and-options.md).
 
 ### Next steps
 

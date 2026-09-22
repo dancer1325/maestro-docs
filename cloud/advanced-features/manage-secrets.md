@@ -47,7 +47,7 @@ You can provide parameters in the multiline `env` field of the GitHub Action:
 {% endtabs %}
 
 {% hint style="info" %}
-For more information about how to use parameters and constants in your Flow, access the [documentation](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants).
+For more information about how to use parameters and constants in your Flow, access the [documentation](../../flows/flow-control-and-logic/parameters-and-constants.md).
 {% endhint %}
 
 ### Use variables in your Flows

@@ -1,0 +1,18 @@
+# launch the native Contacts app + create a NEW entry + saves it + captures a screenshot
+appId: com.google.android.contacts
+---
+- launchApp:
+    clearState: true
+- tapOn: Allow
+- tapOn: Create contact
+- tapOn: First name
+- inputText: John
+- tapOn: Last name
+- inputText: Doe
+- tapOn: Company
+- inputText: Maestro
+- tapOn: "+1"
+- inputText: 111-111-1111
+- tapOn: Save
+- back
+- takeScreenshot: All Contacts

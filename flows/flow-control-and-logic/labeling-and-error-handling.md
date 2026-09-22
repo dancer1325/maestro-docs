@@ -77,7 +77,7 @@ If an optional command fails, it is marked with a warning icon in the output, bu
 Maestro uses the following rules to define the default value of `optional` for the available commands:
 
 * Standard Commands: Default to `optional: false`.
-* AI Commands: Commands such as [`assertNoDefectsWithAI`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertnodefectswithai) and [`assertWithAI`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertwithai) default to `optional: true` due to their probabilistic nature.
+* AI Commands: Commands such as [`assertNoDefectsWithAI`](../../api-reference/commands-available/assertnodefectswithai.md) and [`assertWithAI`](../../api-reference/commands-available/assertwithai.md) default to `optional: true` due to their probabilistic nature.
 
 {% hint style="info" %}
 While `optional` can be added to any command, it has no practical effect on actions that cannot technically "fail" to execute, such as `back`, `stopRecording`, or `clearState`.

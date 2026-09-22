@@ -54,7 +54,7 @@ In this configuration, files in the root of `e2e` run as top-level Flows. Files 
 {% step %}
 #### Install the Maestro CLI
 
-Ensure the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/how-to-install-maestro-cli) is installed on your CI runner:
+Ensure the [Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md) is installed on your CI runner:
 
 ```bash
 curl -Ls "https://get.maestro.mobile.dev" | bash
@@ -86,7 +86,7 @@ The following table describes all the parameter you must pass:
 | `--flows`      | The directory containing your Flows.                                                                                                                                                |
 
 {% hint style="info" %}
-For a complete list of advanced flags, refer to the [Maestro CLI commands and options #cloud](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud "mention") reference.
+For a complete list of advanced flags, refer to the [Maestro CLI commands and options #cloud](../../maestro-cli/maestro-cli-commands-and-options.md#cloud "mention") reference.
 {% endhint %}
 
 {% hint style="info" %}
@@ -121,4 +121,4 @@ Now that your CI pipeline is connected, consider optimizing your cloud runs:
 * Set up notifications via [Slack](../notifications/set-slack-notification.md), [email](../notifications/set-email-notification.md), or [webhooks](../notifications/configure-webhooks.md) to stay informed about build and test results.
 * [Configure the operating system](../environment-configuration/configure-the-os.md) for your runs to match your application and dependency requirements.
 * Define [locales and time zones](../environment-configuration/app-locales-and-device-timezones.md) to ensure consistent behavior across environments and regions.
-* Explore all the [subcommand options for `claud`.](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud)
+* Explore all the [subcommand options for `claud`.](../../maestro-cli/maestro-cli-commands-and-options.md#cloud)

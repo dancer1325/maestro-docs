@@ -7,7 +7,7 @@ description: Test your app in multiple languages and regions using locale config
 Testing how your app handles different languages and regional formats is critical for a global user base. In Maestro, the locale is a global device setting. Because changing the system language requires a device-level configuration change, it is handled via the CLI only at runtime.&#x20;
 
 {% hint style="info" %}
-To define the locale, provide the `--device-locale` flag at execution time using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/). For automated workflows, you can use CI wrappers to configure the locale for [Maestro Cloud](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/ky7LkNoLfvcORtXOzzBs/) runs.&#x20;
+To define the locale, provide the `--device-locale` flag at execution time using the [Maestro CLI](../../../maestro-cli/README.md). For automated workflows, you can use CI wrappers to configure the locale for [Maestro Cloud](../../../cloud/README.md) runs.&#x20;
 
 Note that there is no place within a Flow itself (such as `launchApp` or `config.yaml`) to define the locale.
 {% endhint %}
@@ -88,5 +88,5 @@ maestro test --include-tags french .maestro/
 #### Related Documentation
 
 * [locales-supported-by-maestro.md](locales-supported-by-maestro.md "mention"): Check the full list of supported locales.
-* [Maestro CLI overview](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/ "mention"): Learn how to execute flows using the CLI.
+* [Maestro CLI overview](../../../maestro-cli/README.md "mention"): Learn how to execute flows using the CLI.
 * [test-discovery-and-tags.md](../../workspace-management/test-discovery-and-tags.md "mention"): Learn how to group and filter your localization tests.

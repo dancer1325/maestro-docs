@@ -1,38 +1,31 @@
----
-description: >-
-  Write and execute your first Maestro Flow using the CLI. Automate the Contacts
-  app on an Android emulator with YAML commands and recording.
----
-
 # Run your first test with the Maestro CLI
 
-In this tutorial, you will write and execute your first Maestro Flow using the CLI. You will create a test that automates the process of adding a new contact to an Android device using the native Contacts app.
+In this tutorial, you will write and execute your first Maestro Flow using the CLI.
+* You will create a test that automates the process of adding a new contact to an Android device using the native Contacts app.
 
 ### Prerequisites
 
 Ensure you have the following ready before starting:
 
-* **Maestro CLI**: Installed and configured on your local machine. If not yet installed, follow the [how-to-install-maestro-cli](how-to-install-maestro-cli/ "mention") guide.
-* **Android Studio**: Used to manage and launch virtual devices. See the [QuickStart](https://app.gitbook.com/s/CbCMt5C3rawmE9oIus7f/get-started/quickstart) guide.
+* **Maestro CLI**: Installed and configured on your local machine. If not yet installed, follow the [how-to-install-maestro-cli](how-to-install-maestro-cli/) guide.
+* **Android Studio**: Used to manage and launch virtual devices. See the [QuickStart](../introduction/get-started/quickstart.md) guide.
 
-{% stepper %}
-{% step %}
-### Start the Android emulator
+## Step 1: Start the Android emulator
 
-Maestro requires an active device or emulator to interact with the application UI. This example uses Android Emulator to run an emulated Android device:
+Maestro requires an active device or emulator to interact with the application UI.
+* This example uses Android Emulator to run an emulated Android device:
 
 1. Open **Android Studio**.
 2. Navigate to the **Virtual Device Manager**.
 3. Launch a virtual device (e.g., Pixel 8 or similar).
 4. Wait for the device to appear in your home screen.
 
-<figure><img src=".gitbook/assets/run-maestro-cli-1.gif" alt=""><figcaption></figcaption></figure>
-{% endstep %}
+![](.gitbook/assets/run-maestro-cli-1.gif)
 
-{% step %}
-### Create the Flow file
+## Step 2: Create the Flow file
 
-A Flow is a YAML file containing the commands Maestro executes. For this tutorial, we will use the system's default Contacts app (`com.google.android.contacts`), which is pre-installed on standard Android emulators:
+A Flow is a YAML file containing the commands Maestro executes.
+* For this tutorial, we will use the system's default Contacts app (`com.google.android.contacts`), which is pre-installed on standard Android emulators:
 
 1. Create a new directory for your test and navigate into it.
 2. Create a file named `contacts.yaml`.
@@ -59,21 +52,14 @@ appId: com.google.android.contacts
 - stopRecording                   # Saves the video file
 ```
 
-{% hint style="info" %}
-If you don't know to create and structure Flows, access the [specific documentation](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/).
-{% endhint %}
+> If you don't know how to create and structure Flows, access the [Flows documentation](../flows/README.md).
 
-{% hint style="info" %}
-#### Download and use Maestro samples
+> **Download and use Maestro samples**
+>
+> The Maestro CLI provides the `download-samples` command, which lets you download a curated collection of Flow files to help you learn Maestro.
+> Run `maestro download-samples` to get started.
 
-The Maestro CLI provides the `download-samples` command, which lets you download a curated collection of Flow files to help you learn Maestro. Use these samples to explore examples and understand how different Maestro features work in practice.
-
-To use this command, run `maestro doenload-samples`.
-{% endhint %}
-{% endstep %}
-
-{% step %}
-### Run the Flow
+## Step 3: Run the Flow
 
 With the emulator running and your YAML file ready, you can now execute the test:
 
@@ -84,55 +70,43 @@ With the emulator running and your YAML file ready, you can now execute the test
 maestro test contacts.yaml
 ```
 
-{% hint style="info" %}
-### CLI options and commands
+> To see all the options and commands available when using the Maestro CLI, [access the Maestro CLI reference](maestro-cli-commands-and-options.md).
 
-To see all the options and commands available when using the Maestro CLI, [access the Maestro CLI documentation](maestro-cli-commands-and-options.md).
-{% endhint %}
+> **Troubleshooting: Connection timeouts**
+>
+> If your CI runner fails to start the Maestro driver within the default timeframe, you may see a timeout error.
+> The default timeout is 15 seconds (15000 ms) for Android and 120 seconds (120000 ms) for iOS.
+> You can extend this by setting a custom millisecond value:
+>
+> ```bash
+> export MAESTRO_DRIVER_STARTUP_TIMEOUT=180000
+> ```
 
-{% hint style="success" %}
-#### Troubleshooting: Connection timeouts
+Maestro will connect to the emulator and execute the steps sequentially.
+* You will see a live progress report in your terminal.
 
-If your CI runner fails to start the Maestro driver within the default timeframe, you may see a timeout error.
+![](.gitbook/assets/image.png)
 
-The default timeout is 15 seconds (15000 ms) for Android and 120 seconds (120000 ms) for iOS.
-
-You can extend this by setting a custom millisecond value in your pipeline environment. Here's an example to increase the timeout to 3 minutes (180000 ms):
-
-```bash
-export MAESTRO_DRIVER_STARTUP_TIMEOUT=180000
-```
-{% endhint %}
-
-Maestro will connect to the emulator and execute the steps sequentially. You will see a live progress report in your terminal.
-
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="info" %}
-#### What happens during execution:
+**What happens during execution:**
 
 1. Maestro begins capturing the screen.
 2. The Contacts app opens and resets any existing state.
 3. Maestro identifies fields by their text or accessibility labels and inputs names and phone numbers.
 4. The contact is saved, and the app navigates back to the list view.
 5. The recording stops, and a file named `recording.mp4` is saved to your directory.
-{% endhint %}
-{% endstep %}
-{% endstepper %}
-
-
 
 ### Final Outcome
 
-Once the test completes, check your folder for the `recording.mp4` file. It should display the automated process exactly as seen in the example below:
+Once the test completes, check your folder for the `recording.mp4` file.
+* It should display the automated process exactly as seen in the example below:
 
-<figure><img src=".gitbook/assets/demo-contacts-cli-maestro.gif" alt=""><figcaption></figcaption></figure>
+![](.gitbook/assets/demo-contacts-cli-maestro.gif)
 
 ### Next steps
 
 Now that you have executed your first Flow, you are ready to explore the deeper capabilities of Maestro:
 
-* [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/flow-control-and-logic-overview): Learn how to build resilient, intelligent journeys by utilizing modular subflows, conditional execution, and repetitive loops to handle complex app states.
-* [Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors): Learn how Maestro identify UI elements when testing your app.
-* [JavaScript](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-overview): Learn how to use JavaScript to extend your YAML logic.
-* [Workspace management](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/workspace-management-overview): Learn how to organize your test suite for larger projects.
+* [Flows](../flows/flow-control-and-logic/flow-control-and-logic-overview.md) — build resilient, intelligent journeys using modular subflows, conditional execution, and repetitive loops.
+* [Selectors](../flows/flow-control-and-logic/how-to-use-selectors.md) — learn how Maestro identifies UI elements when testing your app.
+* [JavaScript](../flows/javascript/javascript-overview.md) — extend your YAML logic with JavaScript.
+* [Workspace management](../flows/workspace-management/workspace-management-overview.md) — organize your test suite for larger projects.
