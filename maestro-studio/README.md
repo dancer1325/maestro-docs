@@ -21,6 +21,13 @@ description: >-
         * arguments
         * real selectors 
     * run -- , WITHOUT switching tools, -- your tests
+  * ways to build your test
+    * **Inspect Screen**
+      * TODO: Click the **Inspect Screen** button to select elements visually on the device and receive recommended commands.
+    * **Insert Command**
+      * TODO: Click the **Insert Command** button in the IDE to choose from a list of standard actions.
+    * **Manual Entry**
+      * TODO: Type commands directly into the YAML editor for precise control.
 
 ## how to use?
 
@@ -36,4 +43,3 @@ description: >-
 | MAIN use case     | Writing + running + debugging tests visually                | executing test suites \| CI/CD |
 | Setup Required    | Android SDK & Xcode <br/> Reason:🧠run vs virtual devices🧠 | Java 17+ + Android SDK + Xcode |
 | Inspection Tool   | Point-and-click interface                                   | -- via -- `maestro hierarchy`  |
-

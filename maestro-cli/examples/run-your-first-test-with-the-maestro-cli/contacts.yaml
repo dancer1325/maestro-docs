@@ -1,0 +1,27 @@
+# goal
+#   test / AUTOMATES the process of adding -- , via the native Contacts app, -- a NEW contact | an Android device
+
+appId: com.google.android.contacts
+# com.google.android.contacts
+#   👀pre-installed | standard Android emulators👀
+
+
+---
+- launchApp:
+    clearState: true              # Resets the app to a fresh state before starting
+- startRecording: recording       # Starts capturing a video of the execution
+- tapOn:
+    text: "Allow"
+    optional: true                # Handles system permission dialog if it appears (may not always show)
+- tapOn: Create contact
+- tapOn: First name
+- inputText: John
+- tapOn: Last name
+- inputText: Doe
+- tapOn: Company
+- inputText: Maestro
+- tapOn: "+1"
+- inputText: 111-111-1111
+- tapOn: Save
+- back                            # Returns to the main contact list
+- stopRecording                   # Saves the video file

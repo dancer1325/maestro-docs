@@ -1,0 +1,2 @@
+- tapOn: "Upload Profile Picture"
+- runFlow: pick_first_image.yaml

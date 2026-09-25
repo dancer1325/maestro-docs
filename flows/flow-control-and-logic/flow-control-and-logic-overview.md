@@ -22,8 +22,14 @@ Identify UI elements with precision
 
 #### **Modularity**
 
-Avoid repeating yourself, you can use [Nested Flows](nested-flows.md) to extract common journeys, like Login or Onboarding, into separate files
-* You can then call these "subflows" across your entire suite using the `runFlow` command.
+* == use [Nested Flows](nested-flows.md)
+* use cases
+  * extract COMMON journeys
+* allows
+  * duplicating flows 
+* _Examples:_ Login, Onboarding
+* how to use?
+  * -- via -- `runFlow` command
 
 #### **Conditional execution**
 

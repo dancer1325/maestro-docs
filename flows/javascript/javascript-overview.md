@@ -4,6 +4,10 @@ description: Extend Maestro flows with JavaScript for complex logic and data man
 
 extend YAML with custom scripting. Handle complex data, generate random test variables, and interact with external APIs via HTTP requests.
 
+* **JavaScript**: For dynamic data needs (e.g., generating random emails), you can inject small JavaScript snippets that run in a restricted environment without access to the local file system.
+
+Run JavaScript expressions directly from YAML to manage complex data or perform HTTP requests
+
 # JavaScript overview
 
 While Maestro’s YAML syntax is designed to handle the majority of UI interactions declaratively, 

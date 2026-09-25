@@ -7,9 +7,19 @@
       * single-binary
     * allows
       * running Maestro flows
+    * provide
+      * MANY commands
+        * UI interactions (`tapOn`, `swipe`)
+        * UI navigation (`launchApp`, `openLink`)
+        * UI device control
   * 's goal
     * E2E mobile
     * web UI testing
+  * how does it work?
+    * interprets "*.yaml"
+    * sends instructions -- to -- the companion driver | the device
+  * use cases
+    * | CI
 
 ### how to use?
 
@@ -21,29 +31,10 @@
 
 ### Maestro CLI features
 
-The CLI serves as the central engine for multiple automation workflows.
-* Whether you prefer using Maestro Studio or your own IDE, the CLI handles the execution against emulators, 
-simulators or physical devices.
-
-| Feature | Description |
-|---|---|
-| **Run Local Tests** | Execute tests against a running emulator/simulator or physical device using the command `maestro test flow.yaml`. |
-| **Continuous Development** | The Continuous Mode (`maestro test -c`) monitors your YAML test files for changes and automatically restarts the test upon saving. |
-| **Device Management** | Create and launch specific emulator or simulator configurations with `maestro start-device`. |
-| **Scale to the Cloud** | Upload your Flows to Maestro Cloud to run tests at scale across a variety of managed device configurations. |
-| **Debug Tools** | Identification of selectors is simplified with commands like `maestro hierarchy`, which prints the current app's view hierarchy directly to the terminal. |
-
-### Core Features
-
-Maestro is built on the philosophy of "embracing instability," 
-providing a suite of features that move beyond traditional automation tools:
-
-| Feature | Description |
-|---|---|
-| Built-in Tolerance | Automatically handles network delays and UI flakiness by waiting for the screen to "settle" before proceeding. |
-| Extensive Commands | A library of commands for UI interactions (`tapOn`, `swipe`), navigation (`launchApp`, `openLink`), and device control. |
-| JavaScript Integration | Run JavaScript expressions directly from YAML to manage complex data or perform HTTP requests. |
-| Modularity | Create composable subflows that can be reused across multiple tests to keep your automation suite DRY (Don't Repeat Yourself). |
-| Flow Recording | The `maestro record` command stitches screen recordings and test output into a shareable MP4 video. |
-| AI Analysis | [Beta] Generate LLM-based analysis reports for UI and internationalization issues. |
-
+| Feature                    | Description                                                                                                           |
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| **Run Local Tests**        | == execute tests vs a running emulator/simulator OR physical device <br/> `maestro test flow.yaml`                    |
+| **Continuous Development** | == monitors your "*.yaml" test -- for -- changes / AUTOMATICALLY restarts the test \| saving <br/> `maestro test -c`  |
+| **Device Management**      | == create & launch specific emulator OR simulator configurations <br/> `maestro start-device`                         |
+| **Scale to the Cloud**     | == upload your Flows \| Maestro Cloud -- to -- run tests at scale \| >1 managed device configurations                 |
+| **Debug Tools**            | == identify -- , by printing CURRENT app's view hierarchy \| terminal, -- selectors <br/> `maestro hierarchy`         |

@@ -2,19 +2,24 @@
 description: Configure your Maestro workspace with config.yaml for test suite settings.
 ---
 
+Generate LLM-based analysis reports for UI and internationalization issues.
+
 # Project configuration
 
-The `config.yaml` file acts as the central "brain" of your Maestro workspace. While it is optional, it becomes essential when your project grows, allowing you to define global rules for your test suite, manage environment variables, and configure platform-specific behaviors.
+The `config.yaml` file acts as the central "brain" of your Maestro workspace
+* While it is optional, it becomes essential when your project grows, allowing you to define global rules for your test suite, manage environment variables, and configure platform-specific behaviors.
 
 {% hint style="info" %}
 **Maestro Studio**
 
-Unlike the Maestro CLI, Maestro Studio does not currently support `config.yaml`. However, Studio will include your configuration file in uploads to Maestro Cloud when you run an entire workspace.
+Unlike the Maestro CLI, Maestro Studio does not currently support `config.yaml`
+* However, Studio will include your configuration file in uploads to Maestro Cloud when you run an entire workspace.
 {% endhint %}
 
 ### When do I need a config file?
 
-If you are just running a single Flow file locally, you don't need a configuration. You should create a `config.yaml` if:
+If you are just running a single Flow file locally, you don't need a configuration
+* You should create a `config.yaml` if:
 
 * You have a deep directory structure and need to define test discovery.
 * You need to handle environment variables across multiple Flows.
@@ -25,7 +30,8 @@ If you are just running a single Flow file locally, you don't need a configurati
 {% hint style="info" %}
 #### Default behavior and hierarchy
 
-When you point Maestro at a directory, it looks for a file named `config.yaml` in the root of that directory. If no `--config` flag is provided and the file is missing, Maestro runs with default settings.
+When you point Maestro at a directory, it looks for a file named `config.yaml` in the root of that directory
+* If no `--config` flag is provided and the file is missing, Maestro runs with default settings.
 {% endhint %}
 
 {% stepper %}
@@ -42,7 +48,9 @@ Ensure the file is named exactly `config.yaml`.
 {% step %}
 #### Configure where flows are stored
 
-Use the `flows` block to define where in your repository the test flows are stored. Typically this will be a single line, but the config permits for a list of locations. Simple globbing syntax is permitted here, where `*` means the contents of a folder, but `**` includes all subfolders too.
+Use the `flows` block to define where in your repository the test flows are stored
+* Typically this will be a single line, but the config permits for a list of locations
+* Simple globbing syntax is permitted here, where `*` means the contents of a folder, but `**` includes all subfolders too.
 
 ```yaml
 # config.yaml
@@ -78,7 +86,8 @@ Some flags, like `disableAnimations`, are a cloud-only feature and does not affe
 
 ### Working with multiple configs
 
-While `config.yaml` is the default, you can create multiple configuration files for different scenarios (e.g., `smoke-config.yaml` or `ci-config.yaml`). To run a test suite with a specific configuration, use the `--config` flag when running the tests with the Maestro CLI:
+While `config.yaml` is the default, you can create multiple configuration files for different scenarios (e.g., `smoke-config.yaml` or `ci-config.yaml`)
+* To run a test suite with a specific configuration, use the `--config` flag when running the tests with the Maestro CLI:
 
 ```bash
 maestro test --config .maestro/ci-config.yaml tests/
@@ -88,7 +97,8 @@ maestro test --config .maestro/ci-config.yaml tests/
 
 If you need a full list of every available key and configuration available, access the  [Workspace configuration](../../api-reference/workspace-configuration.md "mention") reference page.
 
-To plan your test architecture access [design-your-test-architecture](design-your-test-architecture/ "mention"). On the other hand, if you need to organize your tests, learn how to use the `flows` key in your config to manage [test-discovery-and-tags.md](test-discovery-and-tags.md "mention").
+To plan your test architecture access [design-your-test-architecture](design-your-test-architecture/ "mention")
+* On the other hand, if you need to organize your tests, learn how to use the `flows` key in your config to manage [test-discovery-and-tags.md](test-discovery-and-tags.md "mention").
 
 
 

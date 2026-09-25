@@ -72,19 +72,19 @@ description: >-
         * FROM scratch
           * \> "Create a new test"
 
-            ![](../.gitbook/assets/quickstart-create-a-new-test (1).png)
+            ![](../.gitbook/assets/quickstart-create-a-new-test%20(1).png)
 
           * | "Add a new test to your workspace" > select "Mobile Test" >
             * | Android
               * Name == Name for your YAML file.
               * App Id == From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.google.android.contacts** from the dropdown menu.
 
-              ![](../.gitbook/assets/image (6).png)
+              ![](../.gitbook/assets/image%20(6).png)
             * | iOS
               * Name == Name for your YAML file.
               * App Id == From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.apple.MobileAddressBook** from the dropdown menu.
 
-              ![](../.gitbook/assets/image (7).png)
+              ![](../.gitbook/assets/image%20(7).png)
         * FROM EXISTING app
           * \> "Scan file for App Id" option > choose a ".apk" (Android) OR ".app/.zip" (iOS) > "Create Test"
             * == AUTOMATICALLY detect the identifier 
@@ -104,73 +104,22 @@ description: >-
                   clearState: true
               ```
 
-## Run your FIRST test
+* [AVAILABLE commands](../../api-reference/README.md)
+* [how to structure the tests](../../flows/README.md)
+
+## Run your FIRST test -- via -- Maestro Studio
 
 * steps
-With your first YAML file created, let's add a few commands to perform a search.
+  * | Maestro Studio,
+    * click "Run Locally"
+      * -> your virtual device execute AUTOMATICALLY the steps
+      * _Examples:_
 
+        ![Android](../.gitbook/assets/2026-02-15_18-41-27.gif)
+        ![iOS](../.gitbook/assets/2026-02-15_18-26-33.gif)
 
-{% tabs %}
-{% tab title="Android" %}
-
-
-{% hint style="info" %}
-To learn more about the commands you can use to create tests, 
-access the [Commands](../../api-reference/README.md "mention")page.
-
-To learn about how you can structure tests, also referred to in Maestro as Flows, 
-
-
-After pasting, click **Run Locally**
-* Watch your virtual device execute the steps automatically
-* Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
-
-![](../.gitbook/assets/2026-02-15_18-41-27.gif)
-{% endtab %}
-
-{% tab title="iOS" %}
-```yaml
-
-```
-
-The test launches the Address Book app, adds a new contact, and saves the result.
-
-{% hint style="info" %}
-To learn more about the commands you can use to create tests, access the [Commands](../../api-reference/README.md "mention") page.
-
-To learn about how you can structure tests, also referred to in Maestro as Flows, access the [Flows](../../flows/README.md "mention").
-{% endhint %}
-
-After pasting, click **Run Locally**
-* Watch your virtual device execute the steps automatically
-* Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
-
-![](../.gitbook/assets/2026-02-15_18-26-33.gif)
-{% endtab %}
-{% endtabs %}
-{% endstep %}
-{% endstepper %}
-
-{% hint style="success" %}
-**Interactive Flow authoring**
-
-While this QuickStart focuses on manual YAML, Maestro Studio offers three interactive ways to build your test:
-
-* **Inspect Screen**: Click the **Inspect Screen** button to select elements visually on the device and receive recommended commands.
-* **Insert Command**: Click the **Insert Command** button in the IDE to choose from a list of standard actions.
-* **Manual Entry**: Type commands directly into the YAML editor for precise control.
-
-<i class="fa-hand-point-right">:hand-point-right:</i> **Access** [Run tests with Maestro Studio](../../maestro-studio/run-tests-with-maestro-studio.md "mention") **for more information.**
-{% endhint %}
+* [how to run tests -- with -- Maestro Studio](../../maestro-studio/run-tests-with-maestro-studio.md)
 
 ## Video walkthrough
 
-* [here](https://www.youtube.com/watch?v=E7qwFwo_nu0) 
-
-## Next steps
-
-Now that you’ve seen the power of "arm's length" automation, explore these resources to master the ecosystem:
-
-* Visit the [Maestro Studio](../../maestro-studio/README.md "mention") to learn how to use visual element inspection and the Live REPL to build tests without writing code from scratch.
-* If you prefer a programmatic approach or need to integrate tests into your CI/CD pipeline, head to the [Maestro CLI](../../maestro-cli/README.md "mention").
-* To learn the best practices for logic, modularity, and nesting, or learn how to add JavaScript scripts to your tests check out the [Flows](../../flows/README.md "mention").
+* [here](https://www.youtube.com/watch?v=E7qwFwo_nu0)

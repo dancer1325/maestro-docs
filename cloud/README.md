@@ -14,6 +14,9 @@ By offloading device management to the cloud, teams can reduce test execution ti
 Maestro does not provide a separate "Cloud CLI." To take advantage of Maestro Cloud features, you use the `cloud` subcommand within the standard [Maestro CLI](../maestro-cli/README.md). This subcommand uploads your app and test flows to our cloud infrastructure and enables hosted test execution.
 {% endhint %}
 
+Maestro Cloud acts as the execution backend for large-scale testing
+* Teams upload their apps and Flows to run in parallel across multiple hosted virtual devices, ensuring deterministic results and faster feedback loops.
+
 ### Learn how to use Maestro Cloud
 
 Follow these guides to set up your cloud testing environment:

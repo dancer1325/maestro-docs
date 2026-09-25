@@ -6,9 +6,10 @@ description: >-
 
 # Record your Flow
 
-Maestro allows you to generate high-quality screen recordings of your tests without needing third-party software. The `record` command programmatically stitches the app screen and Flow output into a professional MP4, making it easy to debug failures or showcase features.
+Maestro allows you to generate high-quality screen recordings of your tests without needing third-party software
+* The `record` command programmatically stitches the app screen and Flow output into a professional MP4, making it easy to debug failures or showcase features.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+![](../.gitbook/assets/image%20(2).png)
 
 ### Why record your Flows?
 
@@ -16,9 +17,10 @@ Maestro allows you to generate high-quality screen recordings of your tests with
 * **Collaboration**: Share a clear video of a bug or user journey with developers and stakeholders.
 * **Documentation**: Maintain a visual record of your application's critical paths for compliance or training.
 
-### How to record&#x20;
+### How to record?
 
-To ensure the best performance and privacy, it is recommended to use Local Rendering. This processes the video directly on your machine.
+To ensure the best performance and privacy, it is recommended to use Local Rendering
+* This processes the video directly on your machine.
 
 ```bash
 maestro record --local YourFlow.yaml
@@ -34,7 +36,9 @@ After rendering, the video will be available in the same directory as the [repor
 {% hint style="info" %}
 #### Deprecation notice
 
-The standard `maestro record` (remote) command is being deprecated. In future releases, local rendering will become the default behavior. We recommend switching to the `--local` flag now to prepare for this change.
+The standard `maestro record` (remote) command is being deprecated
+* In future releases, local rendering will become the default behavior
+* We recommend switching to the `--local` flag now to prepare for this change.
 {% endhint %}
 
 #### Legacy (Remote rendering)

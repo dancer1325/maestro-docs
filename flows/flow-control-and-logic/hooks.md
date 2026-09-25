@@ -4,6 +4,8 @@ description: >-
   automation.
 ---
 
+Commands like `onFlowStart` and `onFlowComplete` manage app state, such as clearing cache before a test or logging out after completion.
+
 # Hooks
 
 In automated testing, you often need to perform specific setup or cleanup tasks for every test. Instead of manually adding a `runFlow` to the start or end of every file, Maestro provides Hooks.

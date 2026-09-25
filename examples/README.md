@@ -4,18 +4,12 @@ description: Real-world examples and recipes for common Maestro automation scena
 
 # Examples overview
 
-* goal
-  * real-world scenarios /
-    * gap basic commands -- & -- complex, production-ready automation
-
-While the core documentation explains how commands work, this section focuses on implementation patterns, 
-solving specific technical hurdles like system-level interactions, dynamic content, and scalable architecture.
-
 ### Implementation Recipes
 
-These guides provide targeted solutions for specific technical requirements:
+* goal
+  * show implementation patterns
 
-* [choose-images-from-the-gallery.md](recipes/choose-images-from-the-gallery.md "mention")
+* [choose-images-from-the-gallery.md](recipes/choose-images-from-the-gallery.md)
   * Learn the specific sequence needed to navigate out of your app, interact with the system photo picker, and return to your Flow.
 * [check-the-clipboard-content.md](recipes/check-the-clipboard-content.md "mention")
   * See how to verify that your app correctly copied text or links to the device clipboard using JavaScript assertions.
@@ -31,7 +25,9 @@ These guides provide targeted solutions for specific technical requirements:
 
 ### Real world examples
 
-See how Maestro handles real-world complexity in popular applications.
+* goal
+  * real-world scenarios /
+    * gap: basic commands -- & -- complex, production-ready automation
 
 * [automate-android-contacts-flow.md](real-world-examples/automate-android-contacts-flow.md "mention")
   * A perfect starting point to see how Maestro interacts with native Android system apps using text and ID selectors.

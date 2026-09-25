@@ -2,6 +2,8 @@
 description: Reuse test logic by calling subflows from parent flows with runFlow.
 ---
 
+Common sequences, such as a "Login" process, can be saved in separate files and called by multiple main tests to facilitate maintenance.
+
 # Nested flows
 
 As your test suite grows, you'll find that certain sequences of commands are repeated across multiple flows. Common examples include logging in, clearing app state, or navigating to a specific screen.

@@ -23,8 +23,6 @@ description: >-
 
 ### global
 
-TODO:  define the identity of your application and how Maestro discovers your Flow files.
-
 | Key                                                                         | Description                                                                                                                                                                                                                                                           |
 |-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [`flows`](../flows/README.md)                  | Glob patterns defining which files to include in a test suite <br/> Defaults to `*` (only YAML files in the root folder) <br/> Use `**` for recursive discovery <br/> Prefix a pattern with `!` to exclude matching files; at least one positive pattern is required. |
@@ -32,7 +30,11 @@ TODO:  define the identity of your application and how Maestro discovers your Fl
 
 ### Execution & filtering
 
-Use these keys to control the order and selection of tests during a suite run.
+* allows
+  * | run a test suite,
+    * control the order & selection of tests
+
+TODO:
 
 | **Key**                                                                                                                        | **Description**                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
@@ -57,7 +59,9 @@ Platform-specific settings allow you to optimize the environment for Android or 
 
 ### Maestro cloud configuration
 
-These properties are used only when running tests on [Maestro Cloud](../cloud/README.md).
+* == configuration | run tests | [Maestro Cloud](../cloud/README.md)
+
+TODO:
 
 | **Key**                          | **Description**                                                       |
 | -------------------------------- | --------------------------------------------------------------------- |

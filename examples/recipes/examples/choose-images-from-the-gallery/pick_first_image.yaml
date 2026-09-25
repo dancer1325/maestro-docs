@@ -1,0 +1,42 @@
+# pick_first_image.yaml
+# 's goal
+#   universal adapter / tries -- thanks to `optional: true` -- MULTIPLE approaches if SOME fail TILL find the solution
+#     == if elseif
+# requirements
+#   ⚠️images MUST ALREADY exist | device gallery⚠️
+
+appId: ${APP_ID}
+---
+# Step 1: Android Media Selection
+# Different Android versions use different underlying file managers.
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      # Targets the modern Android SDK 33/34 Media Provider
+      - tapOn:
+          id: 'com.google.android.providers.media.module:id/icon_thumbnail'
+          optional: true
+
+      # Fallback for older SDK 30 (DocumentsUI) selector
+      - tapOn:
+          id: 'com.google.android.documentsui:id/thumbnail'
+          optional: true
+
+# Step 2: iOS Media Selection
+# iOS 18 introduced new grid layouts, while older versions rely on accessibility labels.
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      # Targets the new iOS 18 grid layout
+      - tapOn:
+          id: 'PXGGridLayout-Info'
+          index: 0
+          optional: true
+
+      # Fallback for iOS 17 and below using an accessibility label regex
+      - tapOn:
+          text: 'Photo, .*'
+          index: 0
+          optional: true
