@@ -31,33 +31,32 @@ description: Generate test reports, screenshots, and logs for debugging and CI i
 
 ### Generating reports
 
-TODO: 
-Maestro supports industry-standard formats to ensure compatibility with tools like Jenkins, GitHub Actions, and Azure DevOps, 
-as well as most Testcase Management Systems.
+* ⚠️requirements⚠️
+  * use [Maestro CLI](../../maestro-cli)
+    * `maestro test <FILE_NAME> --format`
+    * == ❌NOT possible -- via -- "config.yaml"❌
 
-{% hint style="info" %}
-#### CLI-dependent
-
-To generate reports, you must use the `--format` flag when running a test with the [Maestro CLI](../../maestro-cli/README.md).
-
-It is not possible to define report generation directly in the `config.yaml` file.
-{% endhint %}
+* Maestro
+  * ensure compatibility -- , thanks to support industry-standard formats, -- with
+    * tools
+      * _Examples:_ Jenkins, GitHub Actions, and Azure DevOps
+    * MOST Testcase Management Systems
 
 #### **JUnit (XML) reports**
 
-JUnit is the standard for CI/CD integration and for test reporting
-* To generate a JUnit report, use the `--format junit` flag.
-
-You can specify an output file using the `--output` flag
-* If omitted, Maestro will generate a `report.xml` file in your current working directory
-* Note that these reports are not included in the `--test-output-dir` or `--debug-output` folders.
-
-```bash
-maestro test --format junit --output build/report.xml ./e2e
-```
+* == standard |
+  * CI/CD integration
+  * test reporting
+* steps
+  * `maestro test <FILE_NAME> --format junit`
+    * generate | your CURRENT working directory,
+      * "report.xml"
+        * if you want to customize it -> use `--output <REPORT_FILE_NAME>`  
+        * NOT included | "--test-output-dir/" OR "--debug-output/"
 
 #### **HTML reports**
 
+TODO: 
 HTML reports provide a human-readable summary, including screenshots of failed steps
 * Similar to JUnit, use the `--output` flag to define a specific destination.
 
