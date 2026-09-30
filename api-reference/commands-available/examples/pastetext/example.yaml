@@ -1,0 +1,8 @@
+appId: com.example.app
+---
+- launchApp
+- copyTextFrom:
+    id: "someId"
+- tapOn:
+    id: "searchFieldId"
+- pasteText
