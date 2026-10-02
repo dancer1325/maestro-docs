@@ -6,17 +6,25 @@ description: >-
 
 # Conditions
 
-Conditions allow you to execute commands or entire Flows only when specific criteria are met. This is useful for handling platform-specific logic (Android vs. iOS vs. Web), managing A/B tests, or dealing with dynamic UI elements like onboarding screens or permission dialogs.
+* Conditions 
+  * allow you to 
+    * if SOME criteria are met -> execute commands OR entire Flows
+  * use cases
+    * handle platform-specific logic (Android vs. iOS vs. Web)
+    * manage A/B tests
+    * deal with dynamic UI elements (onboarding screens OR permission dialogs)
 
-{% hint style="success" %}
 #### Keep your tests simple
 
-Overusing conditional logic can make your Flows hard to read and debug. Prefer separate Flows for significantly different scenarios.
-{% endhint %}
+TODO: 
+Overusing conditional logic can make your Flows hard to read and debug
+* Prefer separate Flows for significantly different scenarios.
 
 ### Supported conditions
 
-In Maestro, conditions are primarily handled using the `when` argument. It can be attached to several commands. If the condition inside the `when` block evaluates to `true`, Maestro executes the command; otherwise, Maestro simply skips that command and moves on to the next one.
+In Maestro, conditions are primarily handled using the `when` argument
+* It can be attached to several commands
+* If the condition inside the `when` block evaluates to `true`, Maestro executes the command; otherwise, Maestro simply skips that command and moves on to the next one.
 
 The following table lists the available conditions you can use to define the conditional execution of your Flow.
 
@@ -31,7 +39,8 @@ The following table lists the available conditions you can use to define the con
 
 #### Handling platform differences
 
-Mobile apps often have different UI or behaviors on Android, iOS, or Web. You can use the `platform` condition to run platform-specific Flows.
+Mobile apps often have different UI or behaviors on Android, iOS, or Web
+* You can use the `platform` condition to run platform-specific Flows.
 
 In this example, the test executes a specific subflow to handle permissions, depending on whether the device is running Android, iOS, or Web.&#x20;
 
@@ -54,11 +63,13 @@ In this example, the test executes a specific subflow to handle permissions, dep
 
 #### Handling dynamic state
 
-Sometimes an element may or may not appear, such as a "Rate this App" popup or a newsletter signup. You can handle these dynamic states using two different patterns:
+Sometimes an element may or may not appear, such as a "Rate this App" popup or a newsletter signup
+* You can handle these dynamic states using two different patterns:
 
 {% tabs %}
 {% tab title="The runFlow / when block" %}
-This is the most idiomatically expressive way to handle conditions. It clearly defines the intent "Only run these commands _when_ this condition is met." You combine [`runFlow`](../../api-reference/commands-available/runflow.md) and `when`:&#x20;
+This is the most idiomatically expressive way to handle conditions
+* It clearly defines the intent "Only run these commands _when_ this condition is met." You combine [`runFlow`](../../api-reference/commands-available/runflow.md) and `when`:&#x20;
 
 ```yaml
 - runFlow:
@@ -70,7 +81,9 @@ This is the most idiomatically expressive way to handle conditions. It clearly d
 {% endtab %}
 
 {% tab title="The optional property" %}
-Using the `optional` property is simpler for single-command interactions. It allows the step to fail without failing the entire test. Adding a label helps maintain clarity on why the step is there.
+Using the `optional` property is simpler for single-command interactions
+* It allows the step to fail without failing the entire test
+* Adding a label helps maintain clarity on why the step is there.
 
 ```yaml
 - tapOn:
@@ -82,14 +95,16 @@ Using the `optional` property is simpler for single-command interactions. It all
 {% endtabs %}
 
 {% hint style="success" %}
-Relying on unstable UI states for conditions can lead to flaky tests. Ensure your `visible` selectors are unique and reliable.
+Relying on unstable UI states for conditions can lead to flaky tests
+* Ensure your `visible` selectors are unique and reliable.
 {% endhint %}
 
 #### Using `notVisible` for negative conditions
 
 You can use the `notVisible` condition to handle inverse or “else” scenarios where an action should occur only when a specific element is _not_ present on the screen.
 
-For example, the following command taps **Standard Login** only if the **Biometric Login** option is not visible. The `runFlow` command is used here because the `tapOn` command itself does not support conditional logic:
+For example, the following command taps **Standard Login** only if the **Biometric Login** option is not visible
+* The `runFlow` command is used here because the `tapOn` command itself does not support conditional logic:
 
 ```yaml
 - runFlow:
@@ -103,7 +118,8 @@ This approach allows your tests to adapt to different UI states.
 
 #### Running multiple commands
 
-You don't always need to create a separate file for conditional steps. You can use the `commands` list to define multiple actions inline.
+You don't always need to create a separate file for conditional steps
+* You can use the `commands` list to define multiple actions inline.
 
 In this example, if the "Welcome to our App" text is visible, the flow executes a sequence of taps to navigate through the onboarding screen.
 
@@ -118,7 +134,8 @@ In this example, if the "Welcome to our App" text is visible, the flow executes 
 
 #### Multiple conditions
 
-You can combine multiple conditions in a single `when` block. Note that all conditions must be met (AND logic) for the commands to execute.
+You can combine multiple conditions in a single `when` block
+* Note that all conditions must be met (AND logic) for the commands to execute.
 
 In this example, the **Allow** button is tapped only if the platform is Android AND the **Allow Notifications** text is visible.
 
@@ -146,7 +163,8 @@ In this example, the `new-feature-test.yaml` subflow is executed only if the `IS
 
 If your JavaScript condition is longer than one line, move the logic into a separate `.js` file and use the `output` variable to keep your YAML clean.&#x20;
 
-The following example shows how to move the logic to an external file. First, create your script logic:
+The following example shows how to move the logic to an external file
+* First, create your script logic:
 
 ```javascript
 // checkFeature.js

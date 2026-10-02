@@ -4,35 +4,34 @@ description: Configure app permissions on launch or mid-flow for iOS and Android
 
 # Permissions
 
-Managing system permissions is a common challenge in mobile test automation. Since OS prompts (like "Allow Camera Access") typically only appear once, your test journey can become inconsistent if the app state isn't reset.
+* system permissions
+  * == COMMON challenge | mobile test automation /
+    * can make test journey is inconsistent
+      * Reason:🧠ONLY appear 1!🧠
+      * SOLUTION: 🧠reset the app state🧠
+  * _Examples:_ OS prompts ("Allow Camera Access", ...)
 
-Maestro solves this by allowing you to explicitly configure permissions either at launch or during the Flow, ensuring a predictable environment every time.
+* Maestro
+  * enable you to 
+    * configure permissions 
+      * ensuring a PREDICTABLE environment
+      * | 
+        * [launch time]()
+        * flow time 
 
-### Configure permissions on launch
+## ways to configure permissions
+### | launch time
 
-The easiest way to manage permissions is during the [`launchApp`](../../api-reference/commands-available/launchapp.md) command. By default, Maestro grants all permissions, but you can override this behavior to test specific scenarios.
+* == | [`launchApp`](../../api-reference/commands-available/launchapp.md) command
+  * by default, Maestro grants ALL permissions 
+* == the easiest way to manage permissions 
 
-To customize launch permissions, you need to specify them when calling `launchApp`. The following example denies all permissions but explicitly allows the camera and location:
+### | mid-flow
 
-```yaml
-- launchApp:
-    permissions:
-      all: deny
-      camera: allow
-      location: allow
-```
+TODO: 
+Sometimes you need to change permissions while the app is running, for example, to test how your app handles a permission denial or to prepare for a specific feature flow like scanning a QR code
+* Use the [`setPermissions`](../../api-reference/commands-available/setpermissions.md) command for this purpose.
 
-### Changing permissions mid-flow
-
-Sometimes you need to change permissions while the app is running, for example, to test how your app handles a permission denial or to prepare for a specific feature flow like scanning a QR code. Use the [`setPermissions`](../../api-reference/commands-available/setpermissions.md) command for this purpose.
-
-```yaml
-- setPermissions:
-    permissions:
-      notifications: allow
-```
-
-{% hint style="info" %}
 #### Browser limitation
 
 Maestro can manage permissions for iOS and Android applications, but it has no control over Chrome’s system permissions.
@@ -40,7 +39,8 @@ Maestro can manage permissions for iOS and Android applications, but it has no c
 
 ### Available permissions
 
-Maestro uses standardized names to make your Flows cross-platform. For example, using `bluetooth` on Android targets both `BLUETOOTH_CONNECT` and `BLUETOOTH_SCAN` automatically.
+Maestro uses standardized names to make your Flows cross-platform
+* For example, using `bluetooth` on Android targets both `BLUETOOTH_CONNECT` and `BLUETOOTH_SCAN` automatically.
 
 The following table list all permissions available in iOS and Android.
 
@@ -72,7 +72,8 @@ To grant all available permissions, use `all: allow` to represent all the permis
 
 #### **Android custom permissions**
 
-If a specific Android permission isn't listed above, you can use the full Android Permission ID. The following example adds the `ADD_VOICEMAIL` permission:
+If a specific Android permission isn't listed above, you can use the full Android Permission ID
+* The following example adds the `ADD_VOICEMAIL` permission:
 
 ```yaml
 - setPermissions:
@@ -86,11 +87,14 @@ Note that `all: allow` also covers custom permissions, so you don't need to spec
 
 #### Android special permissions
 
-Not all permissions are prompted for in the app, like location is. Some require the user to leave the app and grant the permission within the Settings app.
+Not all permissions are prompted for in the app, like location is
+* Some require the user to leave the app and grant the permission within the Settings app.
 
 `android.permission.MANAGE_EXTERNAL_STORAGE` permission has been required since Android 12 if an app wished to access files that weren't its own (e.g. file browsers, virus scanners).&#x20;
 
-Maestro can manage this like other permissions without additional user interaction, acting like an app's "second use" rather than first use. If it's declared in the app's AndroidManifest.xml then it'll be set automatically. If you want fine grained control, do as with custom permissions:
+Maestro can manage this like other permissions without additional user interaction, acting like an app's "second use" rather than first use
+* If it's declared in the app's AndroidManifest.xml then it'll be set automatically
+* If you want fine grained control, do as with custom permissions:
 
 ```yaml
 - launchApp:
@@ -123,13 +127,15 @@ env:
 
 This lets one Flow cover both the granted and the denied journey, driven by `--env` or by the `env` block of the calling Flow.
 
-{% hint style="info" %}
-#### **Push notifications on iOS**
+#### Push notifications | iOS
 
-Unlike other permissions, iOS does not grant notification permissions silently. When the app requests permissions, the system prompt appears, and Maestro automatically taps **Allow**.&#x20;
-
-On Android, the permission is granted silently without a prompt.
-{% endhint %}
+* grant permissions
+  * | iOS,
+    * system prompt appears & Maestro AUTOMATICALLY taps "Allow"
+    * ❌!= grant SILENTLY❌ 
+  * | Android, 
+    * it's granted SILENTLY
+      * == WITHOUT a prompt
 
 #### iOS-specific values
 
@@ -146,7 +152,8 @@ iOS supports additional granular values for certain permissions.
 
 #### Deny all permissions
 
-To ensure your app handles permission denied states, start your Flow by denying everything. This forces you to handle the edge cases where a user declines a system permission prompt.
+To ensure your app handles permission denied states, start your Flow by denying everything
+* This forces you to handle the edge cases where a user declines a system permission prompt.
 
 ```yaml
 - launchApp:

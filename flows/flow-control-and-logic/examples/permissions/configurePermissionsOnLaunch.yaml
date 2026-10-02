@@ -1,0 +1,7 @@
+- launchApp:
+    permissions:
+      # deny ALL
+      all: deny
+      # EXPLICITLY enable camera & location
+      camera: allow
+      location: allow

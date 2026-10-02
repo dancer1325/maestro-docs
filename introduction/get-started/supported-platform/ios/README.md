@@ -6,22 +6,32 @@ description: >-
 
 # iOS
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-Maestro provides a high-level abstraction for iOS testing by simulating end-user interactions at the presentation layer. Unlike traditional testing tools that require deep instrumentation, Maestro interacts with the iOS Accessibility layer, allowing you to test your app exactly as a user would.
+* Maestro
+  * provides a high-level abstraction for iOS testing by simulating end-user interactions at the presentation layer
+  * vs traditional testing tools
+    * traditional testing tools
+      * require deep instrumentation
+    * Maestro 
+      * interacts -- with -- the iOS Accessibility layer
+        * allowing you to test your app exactly as a user would.
 
 ### Black-box approach
 
-Maestro analyzes the rendered frames of the iOS device, ensuring your tests are framework-agnostic. Whether your app is built with Swift, Objective-C, Flutter, React Native, or SwiftUI, Maestro interacts only with the visual output.
+Maestro analyzes the rendered frames of the iOS device, ensuring your tests are framework-agnostic
+* Whether your app is built with Swift, Objective-C, Flutter, React Native, or SwiftUI, Maestro interacts only with the visual output.
 
-* **Physical Input Simulation**: Declarative commands are translated into native touch events. When you use `tapOn`, Maestro triggers the same iOS input pipeline that a physical touch would.
-* [**Arm's Length**](../../how-maestro-works.md): Maestro doesn't require access to your source code or bytecode. You test the same `.app` bundle (the Simulator version) that runs on your virtual testing environment.
+* **Physical Input Simulation**: Declarative commands are translated into native touch events
+  * When you use `tapOn`, Maestro triggers the same iOS input pipeline that a physical touch would.
+* [**Arm's Length**](../../how-maestro-works.md): Maestro doesn't require access to your source code or bytecode
+  * You test the same `.app` bundle (the Simulator version) that runs on your virtual testing environment.
 
 ### System-level control
 
-Maestro’s architecture allows it to pilot the entire device, not just your application process. This enables testing for complex real-world scenarios.
+Maestro’s architecture allows it to pilot the entire device, not just your application process
+* This enables testing for complex real-world scenarios.
 
-iOS is known for its strict permission dialogs (Location, Camera). However, Maestro can interact with these system prompts directly:
+iOS is known for its strict permission dialogs (Location, Camera)
+* However, Maestro can interact with these system prompts directly:
 
 ```yaml
 - launchApp:
@@ -31,7 +41,8 @@ iOS is known for its strict permission dialogs (Location, Camera). However, Maes
       notifications: allow
 ```
 
-Maestro also allows you to create multi-app journeys. You can test flows that leave your app, such as opening a link in Safari or checking an email, and then return to your application:
+Maestro also allows you to create multi-app journeys
+* You can test flows that leave your app, such as opening a link in Safari or checking an email, and then return to your application:
 
 ```yaml
 - tapOn: "Open Website"
@@ -45,7 +56,8 @@ Maestro also allows you to create multi-app journeys. You can test flows that le
 
 Maestro connects to your target via native Apple development tools.
 
-* **Simulators**: Run tests on any iOS Simulator managed by Xcode. Ensure you have the Xcode Command Line Tools installed (`xcode-select --install`).
+* **Simulators**: Run tests on any iOS Simulator managed by Xcode
+* Ensure you have the Xcode Command Line Tools installed (`xcode-select --install`).
 * **App Identification**: iOS apps are targeted using the Bundle ID (e.g., `com.example.app`).
 
 ### Cross-platform configuration
@@ -77,7 +89,8 @@ maestro test --env APP_ID=com.example.app.ios flow.yaml
 
 ### Parallelization for iOS
 
-Scaling iOS tests locally can be difficult due to macOS hardware requirements. [Maestro Cloud](../../../../cloud/README.md) provides instant access to a fleet of iOS Simulators, allowing you to run your entire suite in parallel.
+Scaling iOS tests locally can be difficult due to macOS hardware requirements
+* [Maestro Cloud](../../../../cloud/README.md) provides instant access to a fleet of iOS Simulators, allowing you to run your entire suite in parallel.
 
 * **Speed**: Reduce test time drastically.
 * **Reliability**: Eliminate "flaky" results caused by local machine resource contention.

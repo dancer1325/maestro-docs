@@ -1,0 +1,12 @@
+# 1. -- by -- its visible text
+- tapOn: "My text"
+
+# 2. -- based on -- `id` selector
+- tapOn:
+    id: "your.view.id"
+
+# 3. if you need to tap the SAME element SEVERAL times | a row -> use `repeat`
+- tapOn:
+    id: "plus_button"
+    repeat: 5
+    delay: 200

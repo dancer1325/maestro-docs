@@ -1,0 +1,47 @@
+# 1. launch the app | test
+- launchApp
+
+# 2. launch the app -- by -- its ID
+- launchApp: com.example.app
+
+# 3. launchApp | web, redirect to the `url` value
+url: https://docs.maestro.dev/
+---
+- launchApp
+- openLink:
+    link: https://maestro.dev/cloud
+- tapOn:
+    text: Start Your Free Trial
+    index: 2
+- launchApp
+
+# 4. clearState: true
+- launchApp:
+    appId: "com.example.app"
+    clearState: true
+    clearKeychain: true # Optional
+
+# 5. stopApp: false
+- launchApp:
+    stopApp: false
+
+# 6. set permissions | launch
+#   6.1 deny ALL permissions
+- launchApp:
+      permissions:
+          all: deny
+#   6.2 set specific permissions / add EACH one INDEPENDENTLY
+- launchApp:
+      permissions:
+          notifications: unset
+          android.permission.ACCESS_FINE_LOCATION: deny
+
+# 7. arguments
+- launchApp:
+      appId: "com.example.app"
+      arguments:
+          foo: "This is a string"
+          isFooEnabled: false
+          fooValue: 3.24
+          fooInt: 3
+

@@ -4,49 +4,29 @@ description: Repeat a block of commands a specified number of times.
 
 # repeat
 
-The `repeat` command executes a sequence of commands multiple times, either for a fixed number of iterations or until a specific condition is met.
+* `repeat` command
+  * executes a sequence of commands >1 times 
+    * a fixed number of iterations, OR
+    * TILL specific condition is met
+  * use cases
+    * increase the value of a counter
 
 ### Parameters
 
-To customize sequence execution when using the `repeat` command, you can use the following parameters:
+| Parameter  | Type      | Description                                       |
+| ---------- | --------- |---------------------------------------------------|
+| `times`    | integer   | == number of times -- to -- repeat the `commands` |
+| `while`    | condition | == condition / TILL it's true -> repeat           |
+| `commands` | list      | == commands to execute / EACH iteration           |
 
-| Parameter  | Type      | Description                                                                                                                |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `times`    | integer   | The number of times to repeat the `commands`.                                                                              |
-| `while`    | condition | A condition that must evaluate to `true` for the loop to continue. The loop terminates when the condition becomes `false`. |
-| `commands` | list      | The list of commands to execute during each iteration.                                                                     |
+TODO:
 
 ### Usage examples
 
-#### Repeat a specific number of times
-
-To execute a set of commands a fixed number of times, use the `times` parameter.
-
-```yaml
-- repeat:
-    times: 3
-    commands:
-      - tapOn: Button
-      - scroll
-```
-
-In the above example, the test will repeat the process of tapping on the button and scrolling three consecutive times.
-
-#### Repeat while a condition is true
-
-To execute commands as long as a condition is met, use the `while` parameter. The loop continues as long as the element with the text `ValueX` is not visible.
-
-```yaml
-- repeat:
-    while:
-      notVisible: "ValueX"
-    commands:
-      - tapOn: Button
-```
-
 #### Repeat using a JavaScript expression
 
-The `while` parameter also accepts a JavaScript expression. The loop continues as long as the expression evaluates to `true`.
+The `while` parameter also accepts a JavaScript expression
+The loop continues as long as the expression evaluates to `true`.
 
 ```yaml
 - evalScript: ${output.counter = 0}
@@ -89,7 +69,3 @@ Here’s another example that logs `"Hello World"` four times. The `times: 4` li
 {% hint style="success" %}
 Use the `--verbose` flag to see the effect of the `repeat` command more effectively when using [Maestro CLI overview](../../maestro-cli/README.md "mention").
 {% endhint %}
-
-### Related content
-
-Learn how to use [conditions](../../flows/flow-control-and-logic/conditions.md) in your Flows.

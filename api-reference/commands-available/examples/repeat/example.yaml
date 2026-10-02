@@ -1,0 +1,15 @@
+# 1. -- via -- `times` parameter
+#   == SPECIFIC number of times
+- repeat:
+    times: 3
+    commands:
+      - tapOn: Button
+      - scroll
+
+# 2. -- via -- `while` parameter
+#   == ALWAYS the condition is true
+- repeat:
+    while:
+      notVisible: "ValueX"
+    commands:
+      - tapOn: Button
